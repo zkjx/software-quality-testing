@@ -8,6 +8,8 @@
 >
 > 专业：软件工程
 >
+> 转载或引用请标注本文链接：https://www.cnblogs.com/He-Xiang-best/p/15719087.html
+>
 > 完整代码：https://github.com/He-Xiang-best/Software-Quality-Assurance-and-Testing
 >
 > 欢迎一起交流学习呀！
