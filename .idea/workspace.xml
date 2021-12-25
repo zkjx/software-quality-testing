@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab9e2733-1772-4f78-803b-50e4c8e75c80" name="默认变更列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="mapper" />
+        <option value="yaml" />
+        <option value="Properties File" />
+        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="thymeleaf" />
+        <option value="XML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="alwaysUpdateSnapshots" value="true" />
+        <option name="localRepository" value="C:\Kit\Java\apache-maven-3.6.3\maven-repo" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../../../Kit/Java/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\Kit\Java\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1vhTK365R1gfH0emWj34iGxUOvn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="MyBatisLogPluginindexNum" value="142" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.3535188" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\main\resources\static" />
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\test\java" />
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\test\java\com\study\webTest\dbUtils" />
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\test\resources" />
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\test\resources" />
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\main\resources\static\images" />
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\main\resources\templates" />
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\main\resources\static" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.study" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.study.webTest.testNGWebTest" />
+      <recent name="com.study.springboot.handle" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.WebTest.webTestByUseDatabaseWithMybatis">
+    <configuration name="SpringbootApplicationTests.query" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study" />
+      <option name="MAIN_CLASS_NAME" value="com.study.SpringbootApplicationTests" />
+      <option name="METHOD_NAME" value="query" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootApplicationTests.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study" />
+      <option name="MAIN_CLASS_NAME" value="com.study.SpringbootApplicationTests" />
+      <option name="METHOD_NAME" value="update" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.SpringbootApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebTest.webTestByUseDatabase" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.study" />
+      <option name="MAIN_CLASS_NAME" value="com.study.WebTest" />
+      <option name="METHOD_NAME" value="webTestByUseDatabase" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebTest.webTestByUseDatabaseWithMybatis" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study" />
+      <option name="MAIN_CLASS_NAME" value="com.study.WebTest" />
+      <option name="METHOD_NAME" value="webTestByUseDatabaseWithMybatis" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebTest.webTestByUseExcel" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="springboot" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="com.study" />
+      <option name="MAIN_CLASS_NAME" value="com.study.WebTest" />
+      <option name="METHOD_NAME" value="webTestByUseExcel" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.SpringbootApplicationTests.query" />
+      <item itemvalue="JUnit.SpringbootApplicationTests.update" />
+      <item itemvalue="Spring Boot.SpringbootApplication" />
+      <item itemvalue="TestNG.WebTest.webTestByUseDatabase" />
+      <item itemvalue="TestNG.WebTest.webTestByUseExcel" />
+      <item itemvalue="TestNG.WebTest.webTestByUseDatabaseWithMybatis" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.WebTest.webTestByUseDatabaseWithMybatis" />
+        <item itemvalue="TestNG.WebTest.webTestByUseDatabase" />
+        <item itemvalue="TestNG.WebTest.webTestByUseExcel" />
+        <item itemvalue="JUnit.SpringbootApplicationTests.query" />
+        <item itemvalue="JUnit.SpringbootApplicationTests.update" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\17283\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="ab9e2733-1772-4f78-803b-50e4c8e75c80" name="默认变更列表" comment="" />
+      <created>1627013257518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1627013257518</updated>
+      <workItem from="1627013261501" duration="7987000" />
+      <workItem from="1627182803382" duration="4184000" />
+      <workItem from="1627267658564" duration="3692000" />
+      <workItem from="1628068905936" duration="524000" />
+      <workItem from="1628081066258" duration="22000" />
+      <workItem from="1628083175485" duration="654000" />
+      <workItem from="1630031109310" duration="77000" />
+      <workItem from="1630033030174" duration="7533000" />
+      <workItem from="1630041111642" duration="9045000" />
+      <workItem from="1630059559312" duration="10677000" />
+      <workItem from="1630080513785" duration="1572000" />
+      <workItem from="1630082198440" duration="35000" />
+      <workItem from="1630126353521" duration="779000" />
+      <workItem from="1630131258854" duration="207000" />
+      <workItem from="1630286100470" duration="198000" />
+      <workItem from="1630286629598" duration="71000" />
+      <workItem from="1631718979527" duration="4421000" />
+      <workItem from="1631753442977" duration="1155000" />
+      <workItem from="1633440992929" duration="12658000" />
+      <workItem from="1633957314979" duration="8617000" />
+      <workItem from="1633998950549" duration="18952000" />
+      <workItem from="1634898657479" duration="1430000" />
+      <workItem from="1634901934522" duration="1518000" />
+      <workItem from="1635207934528" duration="7505000" />
+      <workItem from="1635381921042" duration="1558000" />
+      <workItem from="1635493425713" duration="2869000" />
+      <workItem from="1635664951739" duration="7282000" />
+      <workItem from="1635755164357" duration="110000" />
+      <workItem from="1635756495965" duration="705000" />
+      <workItem from="1635781142185" duration="3452000" />
+      <workItem from="1635956422525" duration="6064000" />
+      <workItem from="1636212244684" duration="9123000" />
+      <workItem from="1636419322585" duration="949000" />
+      <workItem from="1637628047802" duration="2400000" />
+      <workItem from="1637630644447" duration="2889000" />
+      <workItem from="1638354920819" duration="297000" />
+      <workItem from="1638405606610" duration="512000" />
+      <workItem from="1638409252562" duration="631000" />
+      <workItem from="1638838577691" duration="3903000" />
+      <workItem from="1638843455565" duration="14634000" />
+      <workItem from="1640047060586" duration="7241000" />
+      <workItem from="1640176373245" duration="33817000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
