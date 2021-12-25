@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns = "http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>防火墙认证</title>
+</head>
+
+<body>
+<form action="/toMain" method="post">
+    <input type="hidden" th:value="${_csrf.token}" name="_csrf" th:if="${_csrf.token}">
+    <br/>
+    username:<input type="text" name="username">
+    <br/>
+    password:<input type="text" name="password">
+    <br/>
+    remember_me:<input type="checkbox" name="remember_me">
+    <br/>
+    <input type="submit" value="submit">
+</form>
+
+</body>
+</html>
