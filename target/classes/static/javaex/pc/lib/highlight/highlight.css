@@ -1,0 +1,115 @@
+pre {
+	position: relative;
+	margin: 0 0 20px 0;
+	padding: 10px;
+	overflow: auto;
+	line-height: 22px !important;
+	background-color: #f6f8fa;
+	border-radius: 3px;
+}
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #525252;
+	-webkit-text-size-adjust: none;
+	font-size: 14px;
+}
+.hljs-doctype {
+	color: #999
+}
+.hljs-tag {
+	color: #3e76f6
+}
+.hljs-attribute {
+	color: #e96900
+}
+.hljs-value {
+	color: #42b983
+}
+.hljs-keyword {
+	color: #e96900
+}
+.hljs-string {
+	color: #42b983
+}
+.hljs-comment {
+	color: #b3b3b3
+}
+.hljs-operator .hljs-comment {
+	color: #525252
+}
+.hljs-regexp {
+	color: #af7dff
+}
+.hljs-built_in {
+	color: #2db7f5
+}
+.css .hljs-class {
+	color: #e96900
+}
+.css .hljs-number,
+.javascript .hljs-number {
+	color: #fc1e70
+}
+.css .hljs-attribute {
+	color: #af7dff
+}
+.css .hljs-important {
+	color: red
+}
+.actionscript .hljs-literal,
+.javascript .hljs-literal {
+	color: #fc1e70
+}
+code {
+	display: inline-block;
+	background: #f7f7f7;
+	font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+	margin: 0 3px;
+	padding: 1px 5px;
+	border-radius: 3px;
+	color: #666;
+	border: 1px solid #eee
+}
+pre code {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+}
+/**右上角复制按钮*/
+pre.bg code {
+	background: #f7f7f7
+}
+pre:hover .javaex-codecopy-btn{
+	display: block;
+}
+pre .javaex-codecopy-btn{
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 12px;
+	color: #666;
+	background-color: #fff;
+	padding: 2px 8px;
+	margin: 8px;
+	border-radius: 4px;
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.05);
+}
+pre .javaex-codecopy-btn:after {
+	content: attr(data-title);
+}
+/**行号*/
+.hljs-ln-numbers {
+	text-align: center;
+	color: #ccc;
+	border-right: 1px solid #CCC;
+}
+.hljs-ln-numbers, td.hljs-ln-line.hljs-ln-numbers {
+	padding-right: 5px;
+}
+.hljs-ln-code, td.hljs-ln-line.hljs-ln-code {
+	padding-left: 10px;
+}

@@ -8,7 +8,7 @@
 >
 > 专业：软件工程
 >
-> 转载或引用请标注本文链接：https://www.cnblogs.com/He-Xiang-best/p/15719087.html
+> 转载或引用请标注本文链接：https://blog.csdn.net/HXBest/article/details/122083502
 >
 > 完整代码：https://github.com/He-Xiang-best/Software-Quality-Assurance-and-Testing
 >
@@ -18,132 +18,336 @@
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![image](https://img-blog.csdnimg.cn/img_convert/cece57138556f8ebe17ea8521e3114e1.png) | ![image](https://img-blog.csdnimg.cn/img_convert/96321ca49ce798da3095c0cb4c2bcafa.png) | ![image](https://img-blog.csdnimg.cn/img_convert/4488f9f9de1c18bb21c82f5657598d0d.png) |
 
----
+
+
+修订历史记录
+
+| 版本  | 日期       | AMD  | 修订者 | 说明                                                         |
+| :---- | ---------- | ---- | ------ | ------------------------------------------------------------ |
+| V1.0  | 2021.12.7  | A    | 何翔   | 完成了单元测试和使用Selenium+TestNG+Excel读取数据并测试。功能比较简单，不足之处是没有使用到数据库数据的读取，以及测试失败后提示不全面，也只是简单的判空和页面跳转，没有做断言的处理，没有报告分析。 |
+| V2.0  | 2021.12.21 | A、M | 何翔   | 在V1.0的基础上添加了使用Selenium+TestNG+数据库读取数据并测试。代码基本重构了一遍，好的地方是判断测试用例情况更加全面，且增加了断言处理，有生成代码的测试报告等。不足之处是断言的数据的使用不对，没有增加预期值的字段，反而使用了一些不需要的数据作为是预期的判断。 |
+| V2.0+ | 2021.12.28 | A、M | 何翔   | 代码在V2.0的基础上进行全面优化，增加了预期值的字段，实际值能够在程序运行过程中获取，与我们的数据库给定的预期值做断言比较，测试用例更加全面完善，且所有测试都成功通过，功能模块没有bug产生，测试报告等也全面完成，分析准确到位。 |
+
+（A-添加，M-修改，D-删除）
 
 
 
 # 一、测试需求
+
+
+
 ## 1.1 测试模块
 
-登入功能模块
+
+
+**后台登入功能模块**
+
+后台指网站或系统用于管理用户数据、网站或系统数据的一部分，一般只允许管理员或特定人员通过后台登录界面进入，对整个网站及系统进行管理，普通用户是没有权限进入的。后台管理主要是用于对网站前台的信息管理，如文字、图片、影音、和其他日常使用文件的发布、更新、删除等操作，同时也包括各种子模块信息的管理。由此可见，后台管理了一个系统相当多至关重要的数据，操控人员一定是需要安全检验认证才可访问的，进而对数据进行管理，因此，设计一个安全严谨的后台的登入功能模块是非常需要的。现对一个设计好的后台登入模块进行登录的测试。
+
+
 
 ## 1.2 测试内容
+
+
+
 - 使用【**Selenium+Java+数据库**】进行数据驱动测试，对自己搭建的Web项目做**登入功能测试**
+
+  
 
 - 使用【**Selenium+Java+Excel**】进行数据驱动测试，对自己搭建的Web项目做**登入功能测试**
 
-- 使用**【Junit】**对自己开发的web程序进行**单元测试**，**实现简单的增删查改操作**
+  
 
-## 1.3 测试用例
+- 使用【**Junit**】对自己开发的web程序进行**单元测试**，**实现简单的增删查改操作**
+
+
+
+# 二、测试设计思想
+
+
+
+## 2.1 测试用例
 
 |     字段名称     |                           描   述                            |
 | :--------------: | :----------------------------------------------------------: |
 |      标识符      |                             UC1                              |
 |      测试项      |                           登入功能                           |
 |      设计者      |                             何翔                             |
-|   测试环境要求   | 与服务器可以正常连接  ；软件：Chrome浏览器96版本以上 ，jdk1.8+，maven相关依赖以及TestNG相关包 |
-|     测试方法     |                手工测试 ；黑盒测试 ；白盒测试                |
-|     输入说明     | （1） 点击登入链接（2）填写登入信息，其中所填写的“用户名”、“密码”登入信息需要和注册保存在数据库信息里面的数据一致，且非空 （3） 点击登入按钮 |
-|     输出标准     | 界面提示信息： （2）登入成功（2）当输入信息不符合要求时要有具体提示（3）登入失败的话，显示登入失败具体失败的原因。 ，跳转相关页面 |
+|   测试环境要求   | 与服务器可以正常连接  ；软件：Chrome浏览器96版本以上 ，jdk1.8+，maven相关依赖以及TestNG相关jar包 |
+|     测试方法     |                         **黑盒测试**                         |
+|     输入说明     | （1） 访问后台（2）填写登入信息，其中所填写的“用户名”、“密码”两个输入框不能为空，且登入的用户信息需要和注册保存在数据库里面的数据一致（3）点击登入按钮 |
+|     输出标准     | 界面提示信息： （1）登入成功时有提示，并能够跳转成功的相关页面（2）当输入的信息不符合要求时，要有具体提示（3）登入失败的时，显示登入失败具体失败的具体原因。 |
 |     特殊要求     |                      进入到后台登入页面                      |
 | 用例之间的依赖性 |                              无                              |
 
 
-# 二、测试设计思想
-## 2.1 Selenium+Java+数据库 and Excel
-![请添加图片描述](https://img-blog.csdnimg.cn/21d6b49fbfeb45dfb4fa83eaf1b5c660.png)
-## 2.2 Junit单元测试
-![请添加图片描述](https://img-blog.csdnimg.cn/a08e50a51a114efd8e5a5f5928ece7ee.png)
 
-# 三、测试代码（核心部分）
+## 2.2 等价类划分
 
-## 3.1 Selenium+Java+数据库
+我们可以设用户输入的登入用户名为：input_username，输入的登入密码为：input_password；正确对应存在的登入用户名为：username，正确对应存在的登入密码为：password。
+
+一个用户想要登入进后台管理系统，需要满足以下条件：
+
+- 登入用户名输入框已填写数据：
+
+  **input_username ≠ 空**
+
+- 登入密码输入框已填写数据：
+
+  **input_password ≠ 空**
+
+- 如果表单信息都填写了，还要判断填写的用户名存在：
+
+  **input_username = username**
+
+- 如果用户名存在，还要判断填写的密码与存在用户的密码一致：
+
+  **input_password = password**
+
+  
+
+|    输入条件    | 有效等价类编号 |        有效等价类         | 无效等价类编号 |        无效等价类         |
+| :------------: | :------------: | :-----------------------: | :------------: | :-----------------------: |
+| 是否填写用户名 |      (1)       |    input_username ≠ 空    |      (2)       |    input_username = 空    |
+|  是否填写密码  |      (3)       |    input_password ≠ 空    |      (4)       |    input_password = 空    |
+|  是否存在用户  |      (5)       | input_username = username |      (6)       | input_username ≠ username |
+|  是否密码一致  |      (7)       | input_password = password |     （8）      | input_password ≠ password |
+
+
+
+注：以下的XXX表示的是非正确的随机数据
+
+| 序号 | 输入值（input_username/input_password） |       覆盖等价类编号       |     输出     |
+| :--: | :-------------------------------------: | :------------------------: | :----------: |
+|  1   |               （“”，XXX）               | （2），（3），（6），（8） | 请输入用户名 |
+|  2   |               （“”，""）                | （2），（4），（6），（8） | 请输入用户名 |
+|  3   |            （“”，password）             | （2），（3），（6），（7） | 请输入用户名 |
+|  4   |              （XXX，“ ”）               | （1），（4），（6），（8） |  请输入密码  |
+|  5   |            （username，“ ”）            | （1），（4），（5），（8） |  请输入密码  |
+|  6   |              （XXX，XXX）               | （1），（3），（6），（8） |  用户不存在  |
+|  7   |            （XXX，password）            | （1），（3），（6），（7） |  用户不存在  |
+|  8   |            （username，XXX）            | （1），（3），（5），（8） | 密码输入错误 |
+|  9   |         （username，password）          | （1），（3），（5），（7） |   登入成功   |
+
+
+
+# 三、测试数据
+
+| 数据库数据                                                   | Excel数据                                                    | 测试用例说明                                                 |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![在这里插入图片描述](https://img-blog.csdnimg.cn/93eda1c6340e4a5089aa8babd6febdb0.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_14,color_FFFFFF,t_70,g_se,x_16) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/973fdab01808498b92282c5204e3a230.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_11,color_FFFFFF,t_70,g_se,x_16) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/00f4803f9eec41a28a3f405912c38ecf.png) |
+
+
+
+| 测试用例编号 |                    输入数据                    |         预期值         |
+| :----------: | :--------------------------------------------: | :--------------------: |
+|    case1     |  input_username = 张三；input_password = 123   |    提示“用户不存在”    |
+|    case2     | input_username = admin；input_password = admin |  提示“密码输入错误 ”   |
+|    case3     | input_username = 李四；input_password = error  |    提示“用户不存在”    |
+|    case4     |   input_username = “”；input_password = 123    |   提示“请输入用户名”   |
+|    case5     |  input_username = admin；input_password = “”   |    提示“请输入密码”    |
+|    case6     |    input_username = “”；input_password = “”    |   提示“请输入用户名”   |
+|    case7     |  input_username = 王五； input_password = “”   |    提示“请输入密码”    |
+|    case8     |  input_username = “”；input_password = error   |   提示“请输入用户名”   |
+|    case9     |  input_username = admin；input_password = 123  | 登入成功，进入后台主页 |
+
+
+
+# 四、测试代码（核心部分）
+
+
+
+## 4.1 TestNG 登入测试
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/1d5254adaa144790b700e2b509d01742.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16)
+
+
+
+### 4.1.1 TestNGConfig.java
+
 ```java
-    @Test(dataProvider="getDatabaseData")
-    public void webTestByUseDatabase(String username , String password){
-        openChrome(url);
-        chromeDriver.findElement(By.name("username")).sendKeys(username);
-        chromeDriver.findElement(By.name("password")).sendKeys(password);
-        chromeDriver.findElement(By.xpath("//input[@type='submit']")).click();
-        assertEquals(FileRoot.getUsername(), username);
-        assertEquals(FileRoot.getPassword(), password);
+package com.study.config;
+
+/*
+ * @ClassName TestNGConfig
+ * @description: 测试代码相关配置信息和数据文件信息
+ * @author: 何翔
+ * @Date 2021/12/27 18:49
+ */
+
+import com.alibaba.excel.EasyExcel;
+
+import java.sql.*;
+import java.util.List;
+import java.util.Map;
+
+
+public class TestNGConfig {
+
+    static  final String url = "jdbc:mysql://localhost/db_springboot?&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true";
+    static  final String driver = "com.mysql.cj.jdbc.Driver";
+    static  final String sqlUserName ="root";
+    static  final String sqlPassword = "1234";
+    static  final String ExcelPath = "C:\\StudyProject\\Project\\Java\\SpringBoot\\springboot\\src\\test\\resources" +
+            "\\TestNGData.xlsx";
+    static  String username ="admin";
+    static  String password ="123";
+    static  String expectResult="登录成功";
+    
+    public static String getIp(){return "http://localhost:8080/";}
+    public static Object[][] getDatabaseData()  {
+        //读取数据库文件信息
+        Object[][] data = null;
         try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
+            Class.forName(driver);
+            Connection con = DriverManager.getConnection(url,sqlUserName, sqlPassword);
+            Statement s = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+            ResultSet rs = s.executeQuery("select * from user_copy ");
+            int total = 0;
+            while (rs.next()) {
+                total++;
+            }
+            data = new Object[total][3];
+            rs.beforeFirst();
+            int a = 0;
+            while (rs.next()) {
+                data[a][0] = rs.getString("user_name");
+                data[a][1] = rs.getString("user_pwd");
+                data[a][2] = rs.getString("expect_result");
+                a++;
+            }
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
-        chromeDriver.quit();
-    }
-
-    @DataProvider(name = "getDatabaseData")
-    public Object[][] getDatabaseData() throws ClassNotFoundException, SQLException {
-        //读取数据库文件信息
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection con = DriverManager.getConnection(FileRoot.getUrl(),FileRoot.getSqlUserName(),
-                FileRoot.getSqlPassword());
-        Statement s = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-        ResultSet rs = s.executeQuery("select * from user ");
-        int total = 0;
-        while (rs.next()) {
-            total++;
-        }
-        Object[][] data = new Object[total][2];
-        rs.beforeFirst();
-        int a = 0;
-        while (rs.next()) {
-            data[a][0] = rs.getString("user_name");
-            data[a][1] = rs.getString("user_pwd");
-            a++;
-        }
-
         return data;
     }
-```
 
-## 3.2 Selenium+Java+Excel
-```java
-    @Test(dataProvider="getExcelData")
-    public void webTestByUseExcel(String username , String password){
-        openChrome(url);
-        chromeDriver.findElement(By.name("username")).sendKeys(username);
-        chromeDriver.findElement(By.name("password")).sendKeys(password);
-        chromeDriver.findElement(By.xpath("//input[@type='submit']")).click();
-        assertEquals(FileRoot.getUsername(), username);
-        assertEquals(FileRoot.getPassword(), password);
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        chromeDriver.quit();
-    }
-
-    @DataProvider(name = "getExcelData")
-    public Object[][] getExcelData(){
+    public static Object[][] getExcelData(){
         //读取Excel文件数据
         List<Map<Integer, String>> list = EasyExcel
-                .read(FileRoot.getExcelPath())
+                .read(ExcelPath)
                 .sheet()
                 .doReadSync();
-         Object[][] data = new Object[list.size()][];
+        Object[][] data = new Object[list.size()][];
         int row=0, column;
-            for (Map<Integer, String> map : list) {
-                data[row] = new Object[map.size()];
-                column=0;
-                for (String value : map.values()) {
-                    data[row][column] = value;
-                    column++;
-                }
-                row++;
+        for (Map<Integer, String> map : list) {
+            data[row] = new Object[map.size()];
+            column=0;
+            for (String value : map.values()) {
+                data[row][column] = value;
+                column++;
+            }
+            row++;
         }
         return data;
     }
+    
+    public static String getExpectResult() {return expectResult;}
+    public static void setExpectResult(String expectResult) {TestNGConfig.expectResult = expectResult;}
+    public static String getUsername() {return username;}
+    public static void setUsername(String username) {TestNGConfig.username = username;}
+    public static String getPassword() {return password;}
+    public static void setPassword(String password) {TestNGConfig.password = password;}
+
+}
+
 ```
 
-## 3.3 Junit单元测试
+
+
+### 4.1.2 TestNGWebTest.java
+
+```java
+package com.study.webTest;
+
+/*
+ * @ClassName TestNGWebTest
+ * @description: 使用TestNG对数据库信息或excel文件信息进行登入功能测试
+ * @author: 何翔
+ * @Date 2021/11/23 8:47
+ */
+
+import com.study.config.TestNGConfig;
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
+
+import static org.testng.AssertJUnit.assertEquals;
+
+
+public class TestNGWebTest{
+
+    static ChromeDriver driver;
+
+    //在当前测试类开始时运行。
+    @BeforeClass
+    public void beforeClass(){
+        System.out.println("-------------------beforeClass");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        driver = new ChromeDriver();
+    }
+
+    //每个测试方法运行之前运行
+    @BeforeMethod
+    public void before(){
+        System.out.println("=====beforeMethod");
+    }
+
+    @Test(dataProvider="getDatabaseData")
+    public void webTestByUseDatabase(String username , String password, String result){testContent(username, password,result);}
+
+    @DataProvider(name = "getDatabaseData")
+    public Object[][] getDatabaseData() {returnTestNGConfig.getDatabaseData();}
+
+    @Test(dataProvider="getExcelData")
+    public void webTestByUseExcel(String username , String password, String result){testContent(username, password,result);}
+
+    @DataProvider(name = "getExcelData")
+    public Object[][] getExcelData() {
+        return TestNGConfig.getExcelData();
+    }
+
+    //每个测试方法运行之后运行
+    @AfterMethod
+    public void after(){
+        System.out.println("=====afterMethod");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //在当前测试类结束时运行。
+    @AfterClass
+    public static void afterClass(){
+        driver.quit();
+        System.out.println("-------------------afterClass");
+    }
+
+    public void testContent(String username , String password , String result){
+        System.out.println("=====testMethod");
+        driver.get(TestNGConfig.getIp());
+        driver.findElement(By.name("username")).sendKeys(username);
+        driver.findElement(By.name("password")).sendKeys(password);
+        driver.findElement(By.id("sign-in-submit")).click();
+        assertEquals( driver.findElement(By.id("expect_result")).getAttribute("value"), result);
+    }
+
+}
+
+```
+
+
+
+## 4.2 Junit 单元测试
+
+![请添加图片描述](https://img-blog.csdnimg.cn/a08e50a51a114efd8e5a5f5928ece7ee.png)
+
+
+
 ```java
 package com.study;
-
 
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -187,9 +391,8 @@ class SpringbootApplicationTests {
 
   @Test
   public void query() {
-    //System.out.println(userService.getById(10));
+    //System.out.println(userService.getById(1));
     System.out.println(userService.list(null));
-
   }
 
   @Test
@@ -208,10 +411,8 @@ class SpringbootApplicationTests {
 
   @Test
   void update() {
-
     System.out.println(userService.update(new UpdateWrapper<User>().lambda()
             .set(User::getUserPwd, "223").eq(User::getUserId, 11)));
-
   }
 
   @Test
@@ -223,100 +424,222 @@ class SpringbootApplicationTests {
     System.out.println(page.getPages());
   }
 
-
 }
 ```
 
 
-# 四、测试数据
-![在这里插入图片描述](https://img-blog.csdnimg.cn/088b0eed7a5b4c2ab9ffaeb7d3274ae0.png)
-
-
 
 # 五、数据分析
+
+
+
 ## 5.1 测试运行分析
-| ![在这里插入图片描述](https://img-blog.csdnimg.cn/238ea552d4a744abb63faf34da60577c.png) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/16620e1c03c94d909025a94888908d1b.png) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/2f6579c4e8f049a88242a34059d10c2b.png) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 用户名为空的情况                                             | 密码为空的情况                                               | 用户名和密码都为空的情况                                     |
 
-| ![在这里插入图片描述](https://img-blog.csdnimg.cn/36ccf201dc1a49d6ad8d20158f1344b9.png) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/5aabd300c8754c8eb4b1f2049d59345d.png) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/b77a2fc9f56c467b8cae0ea975077d32.png) |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 用户名和密码均填写                                           | 用户名或密码错误                                             | 用户名和密码均正确                                           |
+| ![在这里插入图片描述](https://img-blog.csdnimg.cn/937d58427df5497691f6dd8099bf69da.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/6311939104914b6e9f0368a28270e59d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/ffeb4efe517f4033b9072e8b39d6d54a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16) |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                        case：4，6，8                         |                          case：5，7                          |                           case：6                            |
 
-**测试项目运行如下：**
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cbf17e27eb844b4e8204f547ff5b3f43.png)
+| ![在这里插入图片描述](https://img-blog.csdnimg.cn/e927bef11ae241f79cbe2b5df5a78854.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/6d0c2711aa3b40d68bdc915e146b6e3e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/990e16d677b845cf87e782abfcaa1304.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16) |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                           case：2                            |                          case：1，3                          |                           case：9                            |
 
 
-## 5.2 测试情况类别
-| 测试情况 |           输入数据           |            期望值            |            实际值            |
-| :------: | :--------------------------: | :--------------------------: | :--------------------------: |
-|  case1   | 输入错误用户名，输入正确密码 |         进入404页面          |         进入404页面          |
-|  case2   | 输入正确用户名，输入错误密码 |         进入404页面          |         进入404页面          |
-|  case3   | 输入错误用户名，输入错误密码 |         进入404页面          |         进入404页面          |
-|  case4   |  不输入用户名，输入正确密码  | 在用户名栏提示“请填写此字段” | 在用户名栏提示“请填写此字段” |
-|  case5   |  输入正确用户名，不输入密码  |  在密码栏提示“请填写此字段”  |  在密码栏提示“请填写此字段”  |
-|  case6   |   不输入用户名，不输入密码   | 在用户名栏提示“请填写此字段” | 在用户名栏提示“请填写此字段” |
-|  case7   |  输入错误用户名，不输入密码  |  在密码栏提示“请填写此字段”  |  在密码栏提示“请填写此字段”  |
-|  case8   |  不输入用户名，输入错误密码  | 在用户名栏提示“请填写此字段” | 在用户名栏提示“请填写此字段” |
-|  case9   | 输入正确用户名，输入正确密码 |    登入成功，进入后台主页    |    登入成功，进入后台主页    |
 
-## 5.3 测试数据报告
+**登入成功后跳转到相应的后台页面：**
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/5bdf7d1a00f240cd82c311ed7463314f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16)
+
+
+
+**测试项目的运行如下：**
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/62a45989b8df420d8149827d11cc80e3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16)
+
+
+
+## 5.2 测试数据报告
+
 **使用TestNG生成测试报告如下：**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/11255b3c56224f5d9e4c2d60fe484e71.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/257148b851484eaab29ba86f24b7919a.png)
-
-## 5.4 测试数据详情
-![请添加图片描述](https://img-blog.csdnimg.cn/d96cf087c03e498fa059d2891be17513.png)
 
 
 # 六、测试总结
-## 6.1 问题分析
-本次针对自己搭建的Web项目进行测试，大体效果上没有什么问题，但是在测试过程中，也遇到了诸多问题，如下分析：
+
+
+
+## 6.1 技术亮点
+
+
+
+### 6.1.1 ajax实现异步交互
+
+使用ajax，通过在后台与服务器进行少量数据交换，就可以使网页实现异步更新。使得我们可以获得更多的测试用例分析的情况，如判断用户是否存在，存在用户的密码是否正确，细化我们的测试分析情况。
+
+**下面是登入校验的核心代码：**
+
+```javascript
+<script>
+
+   $("#sign-in-submit").click(function () {
+
+      if($("#user").val().length===0){
+         javaex.tip({
+            content : "请输入用户名",
+            type : "error"
+         });
+         $('#expect_result').val("请输入用户名");
+         return false;
+      }
+
+      if($("#pass").val().length===0){
+         javaex.tip({
+            content : "请输入密码",
+            type : "error"
+         });
+         $('#expect_result').val("请输入密码");
+         return false;
+      }
+
+      if(!isPermit()){
+         return false;
+      }
+   })
+
+   function isPermit(){
+      var flag = false;
+      $.ajax({
+         type:"post",
+         url : 'springboot/user/login',
+         data:{username:$('#user').val(),password:$('#pass').val()},
+         success: function (res) {
+            $('#expect_result').val(res["msg"])
+            if(res["type"]==='error'){
+               javaex.tip({
+                  mode : "message",
+                  content : res["msg"],
+                  type : "error"
+               });
+            }
+            else{
+               javaex.tip({
+                  mode : "message",
+                  content : res["msg"],
+                  type : "success"
+               });
+               flag = true;
+            }
+            // 建议延迟加载
+            setTimeout(function() {
+            }, 3000);
+         }
+      });
+      return flag;
+   }
+
+</script>
+```
+
+
+
+### 6.1.2 使用springboot+mybatis-plus框架搭建项目
+
+使用springboot框架能够快速搭建项目，对主流的开发框架都提供了⽆配置集成（springboot内置了配置），且项⽬可以独⽴运⾏、⽆需单独配置servlet容器（内置了tomcat），极⼤提⾼了开发、部署效率，此外还提供了运⾏时监控系统（⽇志等）。
+
+使用mybatis-plus能够帮我们逆向生成代码，提高代码编写的效率，同时给我们提供好了CRUD接口，能让我们操作数据库（稍简单的业务）时无需编写sql语句，可以直接调用内置的方法去操作即可。
+
+**项目中的使用（部分示例）：**
+
+| ![在这里插入图片描述](https://img-blog.csdnimg.cn/60d6a23e4da743058fcb1789bed5c4b8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_14,color_FFFFFF,t_70,g_se,x_16) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/164b7b38239742869db3c31dbdbdc670.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16) |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                        springboot工程                        |              mybatis-plus代码生成器（逆向工程）              |
+
+
+
+### 6.1.3 使用springsecurity安全框架
+
+SpringSecurity 基于 Spring 框架，提供了一套 Web 应用安全性的完整解决方案，能帮助我们更好地实现登入功能的**认证和授权**。
+
+**项目中的使用（部分示例）：**
+
+| ![在这里插入图片描述](https://img-blog.csdnimg.cn/5ec3b36a14424cbdbc973a1405f2a516.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/83f3b4d3d60f41acb9508c7a7f18c097.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16) |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+
+
+
+### 6.1.4 使用EasyExcel工具读取Excel文件数据
+
+EasyExcel是一个基于Java的简单、省内存的读写Excel的开源项目。在尽可能节约内存的情况下支持读写百M的Excel（比POI好）。 github地址:https://github.com/alibaba/easyexcel
+
+**项目中的使用：**
+
+```java
+public static Object[][] getExcelData(){
+    //读取Excel文件数据
+    List<Map<Integer, String>> list = EasyExcel
+            .read(ExcelPath)
+            .sheet()
+            .doReadSync();
+    Object[][] data = new Object[list.size()][];
+    int row=0, column;
+    for (Map<Integer, String> map : list) {
+        data[row] = new Object[map.size()];
+        column=0;
+        for (String value : map.values()) {
+            data[row][column] = value;
+            column++;
+        }
+        row++;
+    }
+    return data;
+}
+```
+
+
+
+### 6.1.5 通过IDEA生成TestNG的测试报告
+
+TestNG 默认自带的有HTML格式的测试报告。这也充分说明拿它来做 UI 自动化测试的优势。
+
+| ![在这里插入图片描述](https://img-blog.csdnimg.cn/5d9456bf1e404ce1b817fe530d874a06.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/0a9cef0ad89941eabc560d942afd0b9c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_17,color_FFFFFF,t_70,g_se,x_16) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+
+
+
+## 6.2 问题分析
+
+在读取数据库数据传值给DataProvider的测试过程中，遇到了个别问题，如下分析：
 
 **问题1：**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/dcca2497da564d8bb2dbe6ce6533af7a.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9358e5ce63174ae1a207a72a3c0e4b48.png)
+| ![在这里插入图片描述](https://img-blog.csdnimg.cn/dcca2497da564d8bb2dbe6ce6533af7a.png) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/9358e5ce63174ae1a207a72a3c0e4b48.png) |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|           使用Mybatis-plus封装的CRUD接口查询数据库           |                    测试时报空指针异常错误                    |
 
 **问题1分析：**
 
 此处使用了Mybatis-plus框架，并用框架提供的相关方法查询数据库，但是无法将数据查出，报空指针异常，而且框起来那部分代码是没问题的，能在junit单元测试上测试成功，不知道使用了框架后，TestNG是否支持，如果支持是否有哪些地方进行改进。在测试中遇到了此问题，上网查几乎没有相关解答。
 
-随后考虑报错原因：
+因为测试工程是springboot工程，使用TestNG过程中未解决依赖注入等问题，可能在使用时有其他要求或代码添加等问题需要改进。涉及这方面的知识，后续再了解一下，是否真的存在相关问题。
 
-1、因为测试工程是springboot工程，使用TestNG过程中未解决依赖注入等问题，可能在使用时有其他要求或代码添加等问题需要改进。
+上网查了查一些类似问题：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f044bc816d4a475ebca65fa6e386bc36.png)
-于是我不用自动依赖装配注入等，直接使用new对象调用方法，结果还是不行，依旧报同样的错误
-![在这里插入图片描述](https://img-blog.csdnimg.cn/622aab1410b043d9b2c4db711a7b9d1e.png)
+| ![在这里插入图片描述](https://img-blog.csdnimg.cn/f5747cd7714f47e5ae01f18b3541795e.png) | ![在这里插入图片描述](https://img-blog.csdnimg.cn/e2e1aefd1f6042ad89628700149d0799.png) |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                           类似问题                           |                           解决方法                           |
 
-涉及这方面的知识，后续再了解一下，是否真的存在相关问题。（问题2同样也有)
 
-2、使用TestNG时，与Mybatis-plus框架支持有其他使用要求或代码添加等问题需要改进。于是我不适用MyBatis-plus框架，通过原生jdbc的方式，封装在外面的方法里，进行调用查询，可是，同样报一样的错误，不能查询到数据，上网查了一下，也遇到有相关问题：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f5747cd7714f47e5ae01f18b3541795e.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e2e1aefd1f6042ad89628700149d0799.png)
-
-此问题目前也没有明确问题关键问题与解答，而提供的解决方式就是——将连接操作数据库的代码都直接放在 @DataProvider 中，它就可以正常工作，所以改后就是上面代码给出的那部分。
+此问题目前也没有明确问题关键问题与解答，而提供的解决方式就是——将连接操作数据库的代码都直接放在 @DataProvider 中，它就可以正常工作，改后的代码见下面给出的代码示例。
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/41f9bc3607994dc5a31c7585d9fd5876.png)
 
-**问题2：**
+涉及这方面的知识，后续有时间再了解查阅一下此方面的问题该要如何解决。因此在测试时就改成了用上面能解决数据读取的方法。
 
-在断言地址时，同样由于工程自动装配依赖注入等问题，无法完成断言。
+除了测试学习过程中遇到的一些问题，测试项目本身也有待完善的地方，但由于期末安排紧张，之后有空自己也会完善改进。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8df549f88b5a4ad89838b46fcb6f94da.png)
 
-和问题1第一个问题类似，涉及这方面的知识，后续再了解一下，是否真的存在相关问题，并如何解决。因此在测试时取消了此断言的方案。
-
-除了测试学习过程中遇到的一些问题，测试项目本身也有待完善的地方，但期末安排紧张，就之后有空再稍作改进。
-
-## 6.2 待完善点
-
-因为测试的项目使用了springsecurity安全框架，因此在密码和用户名都填了登入失败时，会由安全框架控制跳转。因此在测试时，前后端并未使用异步交互，如ajax那种，可以查询出确切的登入失败信息，如用户不存在，用户存在但登入密码错误两种情况，目前项目中就由安全框架控制直接跳转404页面，这部分后续有时间再修改完善一下。
 
 ## 6.3 作业总结
 
 通过这次实验，对软件测试有了更进一步的学习了解，在测试中遇到的问题，能够自己寻找解决方案解决，从中也能学习到更多的知识，也能够将学习到的知识运用到实践当中，自己可以自觉学习相关专业知识，相信后续自己也会不断完善相关方面的知识学习，把知识应用的更好。
-

@@ -9,6 +9,7 @@ package com.study.config;
 
 import com.study.springboot.handle.MyAccessDeniedHandler;
 import com.study.springboot.handle.MyAuthenticationFailureHandler;
+import com.study.springboot.handle.MyAuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -48,9 +49,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
         //表单提交
        http.formLogin()
-               //当发现login时认为是登入，必须和login.html表单提交的地址一样，去执行UserDetailsServiceImpl
+               //当发现以下地址请求时认为是登入，必须和login.html表单提交的地址一样，去执行UserDetailsServiceImpl
                .loginProcessingUrl("/toMain")
 
                //自定义登入页面
@@ -60,8 +62,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                //.loginPage("/showLogin")
 
                //登入成功跳转页面（通过controller请求跳转）
-               .successForwardUrl("/toMain")
-               //.successHandler(new MyAuthenticationSuccessHandler("https://www.cnblogs.com/He-Xiang-best/"))
+               //.successForwardUrl("/toMain")
+               .successHandler(new MyAuthenticationSuccessHandler("/toMain"))
 
                //登入失败后跳转页面，post请求
                //.failureForwardUrl("/toError404");
@@ -73,10 +75,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                // 资源、认证放行（也可以通过跳转实现）
                .antMatchers("/login.html").permitAll()
                //.antMatchers("/showLogin").permitAll()
+               .antMatchers("/springboot/user/login").permitAll()
                //写法2：
                //.antMatchers("/login.html").access("permitAll()")
                .antMatchers("/404.html").permitAll()
-               .antMatchers("/css/**","/js/**","/images/**","/fonts/**","/lib/**").permitAll()
+               .antMatchers("/css/**","/js/**","/images/**","/assets/**","/javaex/**").permitAll()
 
                //正则表达式
                //.regexMatchers(.+[.]png).permitAll()
@@ -99,7 +102,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
        http.rememberMe()
                //失效时间，单位秒
                .tokenValiditySeconds(60)
-               //rememberMeParameter() 修改name值，否则只能叫remember-me
+               //.rememberMeParameter("rememberme") //修改name值，否则只能叫remember-me
                //自定义登入逻辑
                .userDetailsService(userDetailsService)
                //持久层对象

@@ -1,109 +1,163 @@
-<!DOCTYPE HTML>
-<html lang="zxx">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Home</title>
-	<!-- Meta tag Keywords -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords" content=""
-	/>
-
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-
-		$("#error2").click(function() {
-			javaex.tip({
-				mode : "message",
-				content : "操作失败",
-				type : "error"
-			});
-		});
-	</script>
-	<!-- Meta tag Keywords -->
-	<!-- css files -->
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/login.css" type="text/css" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-	<!-- Style-CSS -->
-	<link rel="stylesheet" href="https://www.jq22.com/jquery/font-awesome.4.7.0.css">
-	<!-- Font-Awesome-Icons-CSS -->
-	<!-- //css files -->
-	<!-- web-fonts -->
-	
-	<!-- //web-fonts -->
+	<!--字体图标-->
+	<link href="javaex/pc/css/icomoon.css" rel="stylesheet" />
+	<!--动画-->
+	<link href="javaex/pc/css/animate.css" rel="stylesheet" />
+	<!--皮肤-->
+	<link href="javaex/pc/css/skin/default.css" rel="stylesheet" />
+	<!--骨架样式-->
+	<link href="javaex/pc/css/common.css" rel="stylesheet" />
+	<!--jquery，不可修改版本-->
+	<script src="javaex/pc/lib/jquery-1.7.2.min.js"></script>
+	<!--核心组件-->
+	<script src="javaex/pc/js/javaex.min.js"></script>
+	<!--表单验证-->
+	<script src="javaex/pc/js/javaex-formVerify.js"></script>
 
+	<title>后台登入页面</title>
 </head>
-
 <body>
-	<!-- bg effect -->
-	<div id="bg">
-		<canvas></canvas>
-		<canvas></canvas>
-		<canvas></canvas>
-	</div>
-	<!-- //bg effect -->
-	<!-- title -->
-	<h1>Effect Login Form</h1>
-	<!-- //title -->
-	<!-- content -->
-	<div class="sub-main-w3">
-		<form action="/toMain" method="post">
-			<h2>Login Now
-				<i class="fa fa-long-arrow-down"></i>
-			</h2>
-			<div class="form-style-agile">
-				<label>
-					<i class="fa fa-user"></i>
-					
-				</label>
-				<input placeholder="请输入用户名" name="username" type="text" value="" required="">
-			</div>
-			<div class="form-style-agile">
-				<label>
-					<i class="fa fa-unlock-alt"></i>
-					
-				</label>
-				<input placeholder="请输入密码" name="password" type="password" required="">
-			</div>
-			<!-- checkbox -->
-			<div class="wthree-text">
-				<ul>
-					<li>
-						<label class="anim">
-							<input type="checkbox" class="checkbox" name="remember-me">
-							<span>记住密码</span>
-						</label>
-					</li>
-					<li>
-						<a href="#">忘记密码?</a>
-					</li>
-				</ul>
-			</div>
-			<!-- //checkbox -->
-			<input type="submit" value="登入">
-		</form>
-	</div>
-	<!-- //content -->
+<!-- bg effect -->
+<div id="bg">
+	<canvas></canvas>
+	<canvas></canvas>
+	<canvas></canvas>
+</div>
+<!-- //bg effect -->
 
-	<!-- copyright -->
-	<div class="footer">
-		<p>Copyright &copy; 2021 何翔.Company name All rights reserved.</p>
+<div class="login-wrap" style="margin-top: 30px">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+
+
+		<div class="login-form">
+			<form action="/toMain" method="post" id="registSubmit">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Username</label>
+					<input id="user" type="text" class="input" name="username">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="pass" type="password" class="input"  name="password">
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" name="remember-me" >
+					<label for="check" style="color:white;font-size: larger;">
+						<span class="icon"></span> 记住密码 </label>
+				</div>
+				<div class="group">
+					<input id="sign-in-submit" type="submit" class="button" value="登入">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#" style="color:#ff9901;font-size: large">忘记密码？</a>
+				</div>
+			</div>
+			</form>
+			<div class="sign-up-htm">
+				<div class="group">
+					<label for="user" class="label">Username</label>
+					<input id="sign-up-user" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="sign-up-pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Repeat Password</label>
+					<input id="sign-up-repeat-pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<input id="sign-up-email" type="text" class="input">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign Up" style="margin-top: 35px">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<label for="tab-1"><a style="color:#ff9901;font-size: large">已有账号？点击登入</a></label>
+				</div>
+			</div>
+		</div>
+
 	</div>
-	<!-- //copyright -->
+</div>
 
-	<!-- Jquery -->
-	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-	<!-- //Jquery -->
 
-	<!-- effect js -->
-	<script src="js/canva_moving_effect.js"></script>
-	<!-- //effect js -->
+<input type="hidden" id="expect_result" value="">
+
 
 </body>
+
+
+<script>
+
+	$("#sign-in-submit").click(function () {
+
+		if($("#user").val().length===0){
+			javaex.tip({
+				content : "请输入用户名",
+				type : "error"
+			});
+			$('#expect_result').val("请输入用户名");
+			return false;
+		}
+
+		if($("#pass").val().length===0){
+			javaex.tip({
+				content : "请输入密码",
+				type : "error"
+			});
+			$('#expect_result').val("请输入密码");
+			return false;
+		}
+
+		if(!isPermit()){
+			return false;
+		}
+	})
+
+	function isPermit(){
+		var flag = false;
+		$.ajax({
+			type:"post",
+			url : 'springboot/user/login',
+			data:{username:$('#user').val(),password:$('#pass').val()},
+			success: function (res) {
+				$('#expect_result').val(res["msg"])
+				if(res["type"]==='error'){
+					javaex.tip({
+						mode : "message",
+						content : res["msg"],
+						type : "error"
+					});
+				}
+				else{
+					javaex.tip({
+						mode : "message",
+						content : res["msg"],
+						type : "success"
+					});
+					flag = true;
+				}
+				// 建议延迟加载
+				setTimeout(function() {
+				}, 3000);
+			}
+		});
+		return flag;
+	}
+
+</script>
+
+<script src="js/canva_moving_effect.js"></script>
 
 </html>

@@ -1,0 +1,1005 @@
+@charset "utf-8";
+body {
+	background: #fff;
+	color: #333;
+}
+a {
+	color: #666;
+}
+
+/*导航*/
+.javaex-navbar {
+	color: #FFF;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	background: #303848;
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.javaex-navbar .javaex-nav > li > a {
+	color: #FFF;
+}
+.javaex-navbar .javaex-nav > li > a::after {
+	background: #FFF;
+}
+.javaex-navbar .javaex-nav > li > ul.javaex-nav-dropdown-menu {
+	background-color: #303848;
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.javaex-navbar .javaex-nav > li > ul.javaex-nav-dropdown-menu li a {
+	color: #fff;
+}
+.javaex-navbar .javaex-nav > li > ul.javaex-nav-dropdown-menu li a:hover {
+	color: #1B8AFA;
+	background-color: rgba(239, 239, 239, 0.15);
+}
+
+/*左侧固定 */
+.javaex-aside-fixed {
+	background: #fff;
+}
+.javaex-aside h1::after {
+	background: #000000;
+}
+.javaex-aside h1 .javaex-nav-name {
+	color: #000;
+}
+
+/*左侧菜单*/
+.javaex-menu-container {
+	background-color: #fff;
+}
+.javaex-menu .javaex-menu a {
+	color: rgba(0,0,0,0.85);
+}
+.javaex-menu li.javaex-menu-item > a:hover, .javaex-menu li.javaex-menu-item li a:hover, .javaex-menu .javaex-menu-item ul .hover a {
+	background-color: rgba(0,0,0,0.06);
+	color: #108CEE;
+}
+.javaex-menu li.javaex-menu-item.javaex-menu-show > a {
+	background-color: unset;
+}
+.javaex-menu .javaex-menu-item.javaex-menu-show {
+	background: rgba(0,0,0,0.03);
+}
+.javaex-menu .javaex-menu-item.hover > a {
+	background-color: rgba(0,0,0,0.06);
+	color: #108CEE;
+}
+.javaex-markdown {
+	border-left: 1px solid #e8e8e8;
+}
+
+/*文字颜色*/
+.blue, a.blue {
+	color: #1b9aee;
+}
+.navy, a.navy {
+	color: #055f95;
+}
+.indigo, a.indigo {
+	color: #3a9bd9;
+}
+.wathet, a.wathet {
+	color: #eaf6fe;
+}
+.red, a.red {
+	color: #ea2e2e;
+}
+.green, a.green {
+	color: #00cc36;
+}
+.yellow, a.yellow {
+	color: #eea236;
+}
+.gray, a.gray {
+	color: #d8d8d8;
+}
+
+/*按钮*/
+.javaex-btn.blue {
+	color: #fff;
+	background-color: #1b9aee;
+}
+.javaex-btn.blue.empty {
+	background-color: #fff;
+	color: #1b9aee;
+	border: 1px solid #1b9aee;
+}
+.javaex-btn.navy {
+	color: #fff;
+	background-color: #055f95;
+}
+.javaex-btn.navy.empty {
+	background-color: #fff;
+	color: #055f95;
+	border: 1px solid #055f95;
+}
+.javaex-btn.indigo {
+	color: #fff;
+	background-color: #3a9bd9;
+}
+.javaex-btn.indigo.empty {
+	background-color: #fff;
+	color: #3a9bd9;
+	border: 1px solid #3a9bd9;
+}
+.javaex-btn.wathet {
+	color: #108cee;
+	background-color: #eaf6fe;
+}
+.javaex-btn.red {
+	color: #fff;
+	background-color: #ea2e2e;
+}
+.javaex-btn.red.empty {
+	background-color: #fff;
+	color: #ea2e2e;
+	border: 1px solid #ea2e2e;
+}
+.javaex-btn.green {
+	color: #fff;
+	background-color: #00cc36;
+}
+.javaex-btn.green.empty {
+	background-color: #fff;
+	color: #00cc36;
+	border: 1px solid #00cc36;
+}
+.javaex-btn.yellow {
+	color: #fff;
+	background-color: #eea236;
+}
+.javaex-btn.yellow.empty {
+	background-color: #fff;
+	color: #eea236;
+	border: 1px solid #eea236;
+}
+.javaex-btn.gray {
+	color: #222;
+	background-color: #d8d8d8;
+}
+.javaex-btn.gray.empty {
+	background-color: #fff;
+	color: #d8d8d8;
+	border: 1px solid #d8d8d8;
+}
+.javaex-btn.disabled {
+	cursor: not-allowed;
+	color: #999999;
+	background-color: #f6f7fb;
+}
+.javaex-btn.disabled.empty {
+	background-color: #fff;
+	color: #999999;
+	border: 1px solid #999999;
+}
+.javaex-btn.yes {
+	color: #fff;
+	background-color: #3a9bd9;
+}
+.javaex-btn.no {
+	color: #3a9bd9;
+	background-color: #fff;
+	border: 1px solid #3a9bd9;
+}
+.javaex-btn:hover {
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+}
+.javaex-btn:active {
+	opacity: 1;
+	filter: alpha(opacity = 100);
+}
+.javaex-btn.no:hover {
+	background:#edf8ff;
+	color:#3a9bd9 !important
+}
+.javaex-btn.yes:hover {
+	background:#6abaee;
+	color:#fff;
+	border-color:#6abaee
+}
+
+/*主体内容布局*/
+.javaex-block {
+	background-color: #fff;
+}
+.javaex-block.has-border {
+	border: 1px solid #EBEBEB;
+}
+.javaex-block .javaex-block-fixed {
+	background-color: #108CEE;
+}
+.javaex-search-wrapper {
+	background-color: #F5F7FA;
+}
+
+/*辅助元素*/
+.javaex-divider {
+	background-color: rgba(0, 0, 0, 0.12);
+}
+blockquote.javaex-quote {
+	color: #777;
+	border-left: 8px solid #DDDFE4;
+	background: #EEF0F4;
+}
+.javaex-fieldset{
+	border-color: #E5E5E5;
+}
+.javaex-fieldset.javaex-fieldset-line{
+	border-top: 1px solid #E5E5E5;
+}
+
+/*面包屑导航*/
+.javaex-breadcrumb {
+	background: #FFF;
+	border-bottom: 1px solid #EBEBEB;
+}
+.javaex-breadcrumb .divider {
+	color: #D9D9D9;
+}
+.javaex-breadcrumb .active {
+	color: #777;
+}
+.javaex-breadcrumb a {
+	color: #777;
+}
+.javaex-breadcrumb a:hover {
+	color: #1b9aee;
+}
+
+/*输入框*/
+input.javaex-text {
+	color: #333;
+}
+input.readonly {
+	background-color: #eee;
+}
+input.disabled {
+	pointer-events:none;
+	cursor: not-allowed;
+	background-color: #eee;
+}
+/*修改placeholder颜色*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color: #999;
+}
+input::-moz-input-placeholder, textarea::-moz-placeholder {
+	color: #999;
+}
+input::-ms-input-placeholder, textarea:-ms-input-placeholder {
+	color: #999;
+}
+
+/*单选框和复选框*/
+/*普通样式*/
+input[type="radio"].javaex-fill ~ .javaex-fill-css, input[type="checkbox"].javaex-fill ~ .javaex-fill-css {
+	border: 1px solid #c0c0c0;
+	color: transparent;
+}
+input[type="radio"].javaex-fill:disabled ~ .javaex-fill-css, input[type="checkbox"].javaex-fill:disabled ~ .javaex-fill-css {
+	border: 1px solid #ccc;
+	background-color: #eee;
+}
+input[type="radio"].javaex-fill:disabled ~ .javaex-fill-text, input[type="checkbox"].javaex-fill:disabled ~ .javaex-fill-text {
+	color: #999;
+}
+input[type="radio"].javaex-fill:checked ~ .javaex-fill-css, input[type="checkbox"].javaex-fill:checked ~ .javaex-fill-css {
+	border: 1px solid #1b9aee;
+	color: #fff;
+}
+input[type="checkbox"].javaex-fill:checked ~ .javaex-fill-css {
+	background-color: #1b9aee;
+}
+input[type="radio"].javaex-fill:checked[disabled] ~ .javaex-fill-css, input[type="checkbox"].javaex-fill:checked[disabled] ~ .javaex-fill-css {
+	border: 1px solid #99ceff;
+	color: #fff;
+}
+input[type="checkbox"].javaex-fill:checked[disabled] ~ .javaex-fill-css {
+	background-color: #99ceff;
+}
+.javaex-radio-check:after {
+	background-color: #1b9aee;
+}
+.javaex-fill-label.javaex-checkbox-checked:after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #1b9aee;
+	border-radius: 2px;
+	-webkit-animation: javaexCheckboxEffect .36s ease-in-out;
+	animation: javaexCheckboxEffect .36s ease-in-out;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	content: "";
+}
+/*开关样式复选框*/
+.javaex-switch {
+	background-color: #999;
+	box-shadow: #dfdfdf 0 0 0 0 inset;
+}
+.javaex-switch:checked {
+	border-color: #3a9bd9;
+	box-shadow: #3a9bd9 0 0 0 16px inset;
+	background-color: #3a9bd9;
+}
+
+/*select下拉选择框样式*/
+.javaex-select {
+	background: #fff;
+	color: #666;
+}
+div.javaex-select {
+	border: 1px solid #ccc;
+}
+div.javaex-select .javaex-btn {
+	color: #666;
+	background-color: #d8d8d8;
+}
+.javaex-select-close {
+	color: #bbb;
+}
+.javaex-select-ul {
+	background-color: #FFF;
+	border-left: 1px solid #eaf6fe;
+	border-right: 1px solid #eaf6fe;
+	border-bottom: 1px solid #eaf6fe;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+	box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+}
+.javaex-select-ul::-webkit-scrollbar-thumb {
+	background-color: #C1C1C1;
+	-webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5)
+}
+.javaex-select-ul-item {
+	color: #555;
+}
+.javaex-select-ul-item:hover {
+	color: #108cee;
+	background-color: #eaf6fe
+}
+.javaex-select-ul-item.javaex-select-ul-item-selected {
+	color: #108cee
+}
+.javaex-select-ul-item:disabled, .javaex-select-ul-item.javaex-disabled {
+	color: #999;
+	background-color: #f6f7fb;
+}
+
+/*表格*/
+.javaex-table {
+	border: 1px solid #E5E5E5;
+}
+.javaex-table th {
+	border-bottom: 1px solid #E5E5E5;
+	background: #F5F5F5;
+	color: #555;
+}
+.javaex-table td {
+	border-bottom: 1px solid #E5E5E5;
+	color: #666;
+}
+.javaex-table th, .javaex-table td {
+	border-color: #E5E5E5;
+	border-left: 1px solid #E5E5E5;
+}
+.javaex-table tbody tr:hover td {
+	background: #F5FBFF;
+}
+.javaex-table th:first-child, .javaex-table td:first-child{
+	border-left:none;
+}
+.javaex-table tr:last-child td {
+	border-bottom:none;
+}
+.no-vertical-line th, .no-vertical-line td {
+	border-left:none;
+}
+.vertical-line-white th, .vertical-line-white td {
+	border-left:1px solid #fff;
+}
+.no-cross-line th, .no-cross-line td {
+	border-bottom:none;
+}
+.javaex-table.no-border-line, .javaex-table.no-line {
+	border:none;
+}
+.no-line th, .no-line td{
+	border-left:none;border-bottom:none;
+}
+/*隔行着色：color1代表奇数行；color2代表偶数行*/
+.javaex-table.color1 tr:nth-child(odd) td {
+	background-color: #F5F5F5;
+}
+.javaex-table.color2 tr:nth-child(even) td {
+	background-color: #F5F5F5;
+}
+.javaex-table.unhover tr:hover td {
+	background-color: #fff;
+}
+.javaex-table-col-fixed {
+	position: relative;
+	background-color: #fff;
+}
+.javaex-table .javaex-table-col-fixed.javaex-fixed-left {
+	box-shadow: -3px 3px 5px 0px #E5E5E5, inset -1px 0px 0px 0px #E5E5E5;
+}
+.javaex-table .javaex-table-col-fixed.javaex-fixed-center {
+	box-shadow: inset -1px 0px 0px 0px #E5E5E5;
+}
+.javaex-table .javaex-table-col-fixed.javaex-fixed-right {
+	box-shadow: 3px 3px 5px 0px #E5E5E5;
+}
+.javaex-table .javaex-table-col-fixed.javaex-fixed-alone {
+	box-shadow: 3px 3px 5px 0px #E5E5E5, -3px 3px 5px 0px #E5E5E5;
+}
+.javaex-table .javaex-table-sort:hover {
+	fill: #1b9aee;
+}
+
+/*静态提示*/
+.javaex-toast {
+	background-color: #f7f7f7;
+	color: #666;
+}
+.javaex-toast.javaex-toast-success {
+	background-color: #dff0d8;
+	color: #333;
+}
+.javaex-toast.javaex-toast-warning {
+	background-color: #fcf7f1;
+	color: #333;
+}
+.javaex-toast.javaex-toast-danger {
+	background-color: #f2dede;
+	color: #333;
+}
+
+/*操作提示层*/
+.javaex-opt-tip {
+	background: #4c93ff;
+	color: #fff;
+	-webkit-box-shadow: 0 0 4px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 0 4px rgba(0,0,0,.2);
+	box-shadow: 0 0 4px rgba(0,0,0,.2);
+}
+.javaex-opt-tip.success {
+	background-color:#79c37b;
+}
+.javaex-opt-tip.error {
+	background-color:#ff6e6e;
+}
+.javaex-message-feedback {
+	border: 1px solid #e4e4e4;
+	background-color: #fff;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,.1);
+}
+.javaex-message-feedback .submit {
+	box-shadow: 0 0 10px #000;
+}
+.javaex-message-feedback .succeed {
+	color: #00be06;
+}
+.javaex-message-feedback .javaex-mf-failed {
+	color: #ff6000;
+}
+
+/*气泡提示*/
+[tooltip][tooltip-pos="up"]:before {
+	border-top-color:#000;
+}
+[tooltip][tooltip-pos="up"]:after {
+	background-color:#21242a;
+	box-shadow:0 5px 15px rgba(0,0,0,.2);
+	color:#fff;
+}
+[tooltip][tooltip-pos="down"]:before {
+	border-bottom-color: #21242a;
+}
+[tooltip][tooltip-pos="down"]:after {
+	background-color: #21242a;
+	box-shadow: 0 5px 15px rgba(0,0,0,.2);
+	color: #fff;
+}
+[tooltip][tooltip-pos="left"]:before {
+	border-left-color: #000;
+}
+[tooltip][tooltip-pos="left"]:after {
+	background: #000;
+	color: #fff;
+	box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+[tooltip][tooltip-pos="right"]:before {
+	border-right-color: #000;
+}
+[tooltip][tooltip-pos="right"]:after {
+	background: #000;
+	color: #fff;
+	box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+/*树形菜单*/
+.javaex-tree li a {
+	color: #333;
+	background-color: transparent;
+}
+.javaex-tree li a.on {
+	background-color: #BBD4EF;
+}
+
+/*侧边栏*/
+.javaex-drawer {
+	background: #fff;
+}
+.javaex-drawer .javaex-drawer-header {
+	background: #fff;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+/*tab选项卡切换*/
+.javaex-tab {
+	background: #fff;
+}
+.javaex-tab em a {
+	color: #555;
+}
+.javaex-tab em a:hover {
+	color: #ff3c00;
+}
+.javaex-tab .javaex-tab-title {
+	border-bottom: 1px solid #e5e5e5;
+}
+.javaex-tab .javaex-tab-title em {
+	color: #333;
+}
+.javaex-tab .javaex-tab-title li {
+	color: #6d757a;
+}
+.javaex-tab .javaex-tab-title li.current {
+	color: #1b9aee;
+	border-bottom: 1px solid #1b9aee;
+}
+.javaex-tab .javaex-tab-title .javaex-tab-more {
+	color: #909090;
+}
+.javaex-tab.javaex-tab-nav-top .javaex-tab-title, .javaex-tab.javaex-tab-nav-bottom .javaex-tab-title, .javaex-tab.javaex-tab-card-tail .javaex-tab-title, .javaex-tab.javaex-tab-card-tail .javaex-tab-title li.current, .javaex-tab.javaex-tab-card .javaex-tab-title, .javaex-tab.javaex-tab-card .javaex-tab-title li.current {
+	border-bottom: none;
+}
+.javaex-tab.javaex-tab-nav-top .javaex-tab-title li {
+	border-top: 5px solid #fff;
+}
+.javaex-tab.javaex-tab-nav-top .javaex-tab-title li.current {
+	color: #1b9aee;
+	border-top-color: #1b9aee;
+	border-bottom: none;
+}
+.javaex-tab.javaex-tab-nav-bottom .javaex-tab-title li {
+	border-bottom: 5px solid #fff;
+}
+.javaex-tab.javaex-tab-nav-bottom .javaex-tab-title li.current {
+	color: #1b9aee;
+	border-bottom: 4px solid #1b9aee;
+}
+.javaex-tab.javaex-tab-card-tail .javaex-tab-title {
+	border: 1px solid #F6F7FB;
+	background: #F6F7FB;
+}
+.javaex-tab.javaex-tab-card-tail .javaex-tab-title li.current {
+	color: #1b9aee;
+	background-color: #FFF;
+}
+.javaex-tab.javaex-tab-card {
+	background-color: unset;
+}
+.javaex-tab.javaex-tab-card .javaex-tab-title li {
+	border-top: 3px solid #FFF;
+	background: #FFFFFF;
+}
+.javaex-tab.javaex-tab-card .javaex-tab-title li.current {
+	color: #1b9aee;
+	border-top-color: currentColor;
+}
+.javaex-tab.javaex-tab-card .javaex-tab-content {
+	-webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.05);
+	-moz-box-shadow: 5px 5px 5px rgba(0,0,0,0.05);
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.05);
+	background-color: #fff;
+}
+
+/*评分*/
+.javaex-score.active li .icon-star, .javaex-score.active li .icon-star_half {
+	color: #1b8afa;
+}
+.javaex-score li .icon-star, .javaex-score li .icon-star_half {
+	color: rgba(27, 138, 250, 0.6);
+}
+
+/*日期选择框*/
+.javaex-date-container .icon-calendar {
+	color:#777;
+}
+.javaex-date, .javaex-time {
+	color:#333;
+}
+.javaex-time {
+	border: 1px solid #dcdcdc;
+}
+.javaex-date-main {
+	background: #fff;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+	box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+}
+.javaex-date-main td.javaex-data-choice-style {
+	color: #108cee;
+	background-color: #eaf6fe;
+}
+.javaex-date-main td.javaexDateRangeGray {
+	color: #BBB;
+}
+.javaex-date-main td.javaex-started, .javaex-date-main td.javaex-ended, .javaex-date-main td.javaex-selected {
+	color: #fff;
+	background-color: #1b9aee;
+}
+.javaex-date-main table thead tr {
+	background: #f1f2f3;
+}
+.javaex-date-main table thead th {
+	color: #444;
+}
+.javaex-date-footer {
+	border-top: 1px solid #F0F0F0;
+}
+/*修改滚动条样式*/
+.javaex-date-ui ul::-webkit-scrollbar-thumb {
+	background-color: #C1C1C1;
+	-webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5)
+}
+.javaex-date-ui li:hover {
+	color: #108cee;
+	background-color: #eaf6fe
+}
+.javaex-date-ui li.current {
+	color: #fff;
+	background-color: #1b9aee;
+}
+.javaex-date-main td.riqi:hover {
+	color: #108cee;
+	background-color: #eaf6fe;
+}
+.javaex-date-main td.javaexDateRangeGray:hover {
+	color: #BBB;
+	background-color: #fff;
+}
+.javaex-date-main td.javaex-started:hover, .javaex-date-main td.javaex-ended:hover, .javaex-date-main td.javaex-selected:hover {
+	color: #fff;
+}
+.javaex-date-main table caption, .javaex-date-main table caption a {
+	color: #666;
+}
+.javaex-date-main table caption a:hover {
+	color: #1b9aee;
+}
+
+/*表单样式*/
+.javaex-tagbox {
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+.javaex-tags .javaex-tag {
+	background-color: #39f;
+	color: #fff;
+}
+.javaex-tag-remove {
+	color: #fff;
+}
+.javaex-hint {
+	color: #999;
+}
+.javaex-unit-left .subtitle, .javaex-unit-right .javaex-select, .javaex-unit-right input.javaex-date, textarea.javaex-desc, div.javaex-tagbox {
+	color: #333;
+}
+input.javaex-input-border, textarea.javaex-input-border {
+	border:1px solid #3b9eff
+}
+.javaex-page-footer {
+	border-top: 1px solid #e8e8e8;
+}
+
+/*表单验证的错误样式*/
+.javaex-error-parent input, .javaex-error-parent textarea, .javaex-error-parent select {
+	border: 1px solid #bbb;
+	border-color: #eb3b2a;
+}
+.javaex-form-error {
+	color: #eb3b2a;
+}
+
+/*删除弹出层*/
+.javaex-win-hint {
+	background-color: #ff9101;
+	color: #fff;
+}
+.javaex-win-hint .javaex-tail {
+	color: #ff9101;
+}
+
+/*分类筛选*/
+.javaex-classify-list .javaex-classify-title {
+	color: #999;
+}
+li.javaex-classify-li .javaex-classify-letter {
+	color: #555;
+}
+li.javaex-classify-li .javaex-classify-letter:hover {
+	color: #2fb3ff;
+}
+li.javaex-classify-li.on .javaex-classify-letter {
+	color: #fff;
+	background: #2fb3ff;
+}
+
+/*分页*/
+.javaex-pagination>li {
+	margin-right: 3px;
+}
+.javaex-pagination>li>a {
+	color: #999;
+	border: 1px solid #fff;
+}
+.javaex-pagination>li>a:focus, .javaex-pagination>li>a:hover {
+	color: #108cee;
+}
+.javaex-pagination>.active>a, .javaex-pagination>.active>a:focus, .javaex-pagination>.active>a:hover {
+	color: #108cee;
+	border: 1px solid #108cee;
+}
+.javaex-pagination>.disabled>a, .javaex-pagination>.disabled>a:focus, .javaex-pagination>.disabled>a:hover {
+	color: #d9d9d9;
+}
+.javaex-pagination .javaex-select {
+	color: #999;
+	border: 1px solid #ccc;
+}
+.javaex-pagination .javaex-select option {
+	color: #333;
+	cursor: pointer;
+	background-color: #fff;
+}
+.javaex-pagination .javaex-btn-mini {
+	border: 1px solid #ccc;
+	background-color: #fff;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	color: #333;
+}
+.javaex-pagination .javaex-btn-mini:hover {
+	border-color: #bbb;
+	background-color: #eee;
+	color: #333;
+}
+
+/*进度条*/
+.javaex-progress .javaex-progress-level{
+	background-color: #FD4C86;
+}
+
+/*页面预加载*/
+.javaex-loading-mask {
+	background: rgba(255,255,255,.7);
+}
+
+/*评论*/
+.javaex-comment .javaex-comment-form {
+	border: 1px solid #e8e8e8;
+	border-color: rgba(24,25,30,.04);
+}
+.javaex-comment .javaex-comment-form:hover {
+	border: 1px solid #1b9aee;
+}
+.javaex-comment .javaex-comment-textarea {
+	color: #777;
+}
+.javaex-comment .javaex-comment-textarea::-webkit-scrollbar-thumb {
+	background-color: #999;
+}
+.javaex-comment .javaex-comment-textarea.javaex-comment-textarea-reply {
+	border-radius: 4px;
+	border: 1px solid #148aff;
+}
+.javaex-comment .javaex-comment-count-title {
+	color: #222;
+}
+.javaex-comment .javaex-comment-author {
+	color: #18191e;
+	opacity: .6;
+	filter: alpha(opacity=60);
+}
+.javaex-comment .javaex-comment-time {
+	color: #999;
+}
+.javaex-comment .javaex-comment-c-reply {
+	color: #999;
+}
+.javaex-comment .javaex-comment-c-text {
+	color: #666;
+}
+.javaex-comment .javaex-comment-replyer-time {
+	color: #999;
+}
+.javaex-comment .javaex-comment-replyer-time a:hover {
+	color:#148aff;
+}
+.javaex-comment .javaex-comment-ul > li {
+	border-top: 1px solid #eee;
+	border-color: rgba(24,25,30,.05);
+}
+.javaex-comment .javaex-comment-say-btn {
+	background-color: #fff;
+	color: #333;
+	border: 1px solid transparent;
+}
+.javaex-comment a.javaex-comment-say-btn {
+	color: #333;
+}
+.javaex-comment a.javaex-comment-say-btn:hover {
+	color: #148aff;
+}
+.javaex-comment a.fold {
+	color: #21b7ef;
+}
+.javaex-comment .javaex-comment-author:hover {
+	color: #148aff;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.javaex-comment .javaex-comment-c-replyer:hover {
+	color: #00a1d6;
+}
+.javaex-comment .javaex-btn.javaex-comment-submit {
+	color: #fff;
+	background-image: linear-gradient(90deg,#3b9eff,#19c3ff);
+}
+.javaex-comment .javaex-comment-bottom a {
+	color: #18191e;
+	opacity: .4;
+	filter: alpha(opacity=40);
+}
+.javaex-comment .javaex-comment-bottom a:hover {
+	color: #148aff;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.javaex-comment .javaex-comment-c-conent .javaex-comment-c-replyer {
+	color: #18191e;
+	opacity: .6;
+	filter: alpha(opacity=60);
+}
+.javaex-comment .javaex-comment-c-conent .javaex-comment-c-replyer:hover {
+	color: #148aff;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+/*数字选择器*/
+.javaex-numChose-wrap {
+	border: 1px solid #E4E7ED;
+}
+.javaex-numChose-left {
+	border-right: 1px solid #E4E7ED;
+	background-color: #F5F7FA;
+}
+.javaex-numChose-right {
+	border-left: 1px solid #E4E7ED;
+	background-color: #F5F7FA;
+}
+
+/*弹出层*/
+.javaex-dialog {
+	box-shadow: 0 6px 24px rgba(0, 0, 0, .24);
+	border: none;
+	background-color: #fff;
+}
+.javaex-dialog .javaex-dialog-top {
+	background-color: #f6f7fb;
+	color: #666;
+}
+.javaex-dialog .javaex-dialog-opt-icon a {
+	color: #666;
+}
+.javaex-dialog .javaex-dialog-content {
+	color: #333;
+}
+.javaex-dialog .javaex-dialog-btn-confirm {
+	color: #fff;
+	background-color: #1b9aee;
+}
+.javaex-dialog .javaex-dialog-btn-cancel {
+	color: #108cee;
+	background-color: #eaf6fe;
+}
+.javaex-dialog .javaex-dialog-resize {
+	border-color: #CECECE;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+
+/*定位弹出层*/
+.javaex-panel {
+	background: #fff;
+	color: #172b4d;
+	box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.javaex-panel-box p {
+	color: #a7afbc;
+}
+.javaex-panel-box li:hover {
+	background-color: #f4f6f9;
+}
+.javaex-panel.javaex-panel-right:before {
+	background: #ffffff;
+	-webkit-box-shadow: -1px 1px 0 0 rgba(218,218,218,0.69);
+	box-shadow: -1px 1px 0 0 rgba(218,218,218,0.69);
+}
+.javaex-panel.javaex-panel-left:before {
+	background: #ffffff;
+	-webkit-box-shadow: 1px -1px 0 0 rgba(218,218,218,0.69);
+	box-shadow: 1px -1px 0 0 rgba(218,218,218,0.69);
+}
+
+/*删除专用弹出层*/
+.javaex-danger-dialog-wrapper {
+	background: #fff;
+	border: 1px solid #d1d1d1;
+	box-shadow: 0 0 6px 0 rgba(0,0,0,0.3);
+}
+.javaex-danger-dialog-wrapper .javaex-danger-dialog-wrapper-content {
+	color: #222;
+}
+.javaex-danger-dialog-wrapper .javaex-danger-dialog-wrapper-tip {
+	color: #999;
+}
+.javaex-danger-dialog-wrapper .javaex-danger-dialog-wrapper-button .danger {
+	background: #fd4c5b;
+	color: #fff;
+}
+.javaex-danger-dialog-wrapper .javaex-danger-dialog-wrapper-button button {
+	background: #d8d8d8;
+	color: #222;
+}
+.javaex-danger-dialog-wrapper:after {
+	border-color: rgba(255,255,255,0);
+	border-bottom-color: #fff;
+}
+.javaex-danger-dialog-wrapper:before {
+	border-color: rgba(209,209,209,0);
+	border-bottom-color: #d1d1d1;
+}
+
+/*头像上传*/
+.javaex-image-box .javaex-cut-box {
+	border: 1px solid rgb(102, 102, 102);
+	box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+	background: none repeat scroll 0% 0% transparent;
+}
+.javaex-avatar180, .javaex-avatar50, .javaex-avatar30 {
+	border: 1px solid #ddd;
+}
+
+/*图片上传*/
+.javaex-images-container {
+	border: 2px dashed #baedff;
+}
+.javaex-img-trash span {
+	color: #1b9aee;
+}

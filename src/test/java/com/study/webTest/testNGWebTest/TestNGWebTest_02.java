@@ -7,42 +7,32 @@ package com.study.webTest.testNGWebTest;
  * @Date 2021/11/23 8:47
  */
 
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 public class TestNGWebTest_02 {
 
-    //在当前测试类开始时运行。
-    @BeforeClass
-    public static void beforeClass(){
-        System.out.println("-------------------beforeClass");
-    }
 
-    //在当前测试类结束时运行。
-    @AfterClass
-    public static void afterClass(){
-        System.out.println("-------------------afterClass");
-    }
-
-    //每个测试方法运行之前运行
-    @BeforeMethod
-    public void before(){
-        System.out.println("=====beforeMethod");
-    }
-
-    //每个测试方法运行之后运行
-    @AfterMethod
-    public void after(){
-        System.out.println("=====afterMethod");
-    }
-
-    @Test
+    @Test(groups={"高", "正常"})
     public void testCase1(){
-        System.out.println("test case 1");
+        assertEquals(2+2, 4);
     }
 
-    @Test
+    @Test(groups = {"高", "正常"})
     public void testCase2(){
-        System.out.println("test case 2");
+        assertEquals(5-3, 2);
     }
+
+    @Test(groups = {"中", "正常"})
+    public void testCase3(){
+        assertEquals(2/1, 2);
+    }
+
+    @Test(groups = {"低", "异常"})
+    public void testCase4(){
+        assertEquals(2/0, 1);
+    }
+
 
 }

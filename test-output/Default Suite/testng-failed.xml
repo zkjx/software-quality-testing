@@ -3,11 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default Suite]">
   <test thread-count="5" name="springboot(failed)">
     <classes>
-      <class name="com.study.WebTest">
+      <class name="com.study.webTest.TestNGWebTest">
         <methods>
-          <include name="webTestByUseDatabase" invocation-numbers="0 1 2 3 4 5 6 7"/>
+          <include name="after"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="webTestByUseDatabase" invocation-numbers="0 1 2 3 4 5 6 7 8"/>
+          <include name="before"/>
         </methods>
-      </class> <!-- com.study.WebTest -->
+      </class> <!-- com.study.webTest.TestNGWebTest -->
     </classes>
   </test> <!-- springboot(failed) -->
 </suite> <!-- Failed suite [Default Suite] -->

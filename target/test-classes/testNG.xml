@@ -49,7 +49,7 @@ name 指定测试用例（方法）的名称。
     <test name="简单测试">
         <classes>
             <class name="com.study.webTest.testNGWebTest.TestNGWebTest_01"/>
-            <class name="com.study.webTest.testNGWebTest.TestNGWebTest_02">
+            <class name="com.study.TestNGWebTest_02">
             <methods>
                 <include name="testCase2"/>
             </methods>
@@ -85,7 +85,7 @@ name 指定测试用例（方法）的名称。
         </run>
     </groups>
     <classes>
-        <class name="com.study.webTest.testNGWebTest.TestNGWebTest_03"/>
+        <class name="com.study.webTest.testNGWebTest.TestNGWebTest_02"/>
     </classes>
 </test>
 </suite>

@@ -23,12 +23,16 @@
         <option value="yaml" />
         <option value="Properties File" />
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="thymeleaf" />
         <option value="XML File" />
+        <option value="HTML File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <toolWindowEditorPreview>false</toolWindowEditorPreview>
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -73,7 +77,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="MyBatisLogPluginindexNum" value="142" />
+    <property name="MyBatisLogPluginindexNum" value="152" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -83,7 +87,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/images" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.3535188" />
@@ -96,11 +100,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\main\resources\static\images" />
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\main\resources\static\css" />
       <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\main\resources\static" />
+      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\main\resources\static\js" />
       <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\test\java" />
-      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\test\java\com\study\webTest\dbUtils" />
-      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\test\resources" />
-      <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\StudyProject\Project\Java\SpringBoot\springboot\src\test\resources" />
@@ -123,12 +127,12 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.WebTest.webTestByUseDatabaseWithMybatis">
+  <component name="RunManager" selected="TestNG.TestNGWebTest.webTestByUseDatabase">
     <configuration name="SpringbootApplicationTests.query" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.study.*" />
+          <option name="PATTERN" value="com.study.webTest.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,7 +144,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SpringbootApplicationTests.update" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <extension name="coverage">
         <pattern>
@@ -148,85 +152,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.study" />
-      <option name="MAIN_CLASS_NAME" value="com.study.SpringbootApplicationTests" />
-      <option name="METHOD_NAME" value="update" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="springboot" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.SpringbootApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebTest.webTestByUseDatabase" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestNGWebTest.webTestByUseDatabase" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="springboot" />
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.study.*" />
+          <option name="PATTERN" value="com.study.webTest.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="com.study" />
-      <option name="MAIN_CLASS_NAME" value="com.study.WebTest" />
+      <option name="MAIN_CLASS_NAME" value="com.study.webTest.TestNGWebTest" />
       <option name="METHOD_NAME" value="webTestByUseDatabase" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="true" />
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebTest.webTestByUseDatabaseWithMybatis" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.study.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.study" />
-      <option name="MAIN_CLASS_NAME" value="com.study.WebTest" />
-      <option name="METHOD_NAME" value="webTestByUseDatabaseWithMybatis" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebTest.webTestByUseExcel" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="springboot" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.study.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="com.study" />
-      <option name="MAIN_CLASS_NAME" value="com.study.WebTest" />
-      <option name="METHOD_NAME" value="webTestByUseExcel" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="PARAMETERS" value="" />
@@ -244,19 +188,14 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.SpringbootApplicationTests.query" />
-      <item itemvalue="JUnit.SpringbootApplicationTests.update" />
       <item itemvalue="Spring Boot.SpringbootApplication" />
-      <item itemvalue="TestNG.WebTest.webTestByUseDatabase" />
-      <item itemvalue="TestNG.WebTest.webTestByUseExcel" />
-      <item itemvalue="TestNG.WebTest.webTestByUseDatabaseWithMybatis" />
+      <item itemvalue="TestNG.TestNGWebTest.webTestByUseDatabase" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.WebTest.webTestByUseDatabaseWithMybatis" />
-        <item itemvalue="TestNG.WebTest.webTestByUseDatabase" />
-        <item itemvalue="TestNG.WebTest.webTestByUseExcel" />
+        <item itemvalue="TestNG.TestNGWebTest.webTestByUseDatabase" />
+        <item itemvalue="Spring Boot.SpringbootApplication" />
         <item itemvalue="JUnit.SpringbootApplicationTests.query" />
-        <item itemvalue="JUnit.SpringbootApplicationTests.update" />
       </list>
     </recent_temporary>
   </component>
@@ -315,7 +254,9 @@
       <workItem from="1638838577691" duration="3903000" />
       <workItem from="1638843455565" duration="14634000" />
       <workItem from="1640047060586" duration="7241000" />
-      <workItem from="1640176373245" duration="33817000" />
+      <workItem from="1640176373245" duration="37517000" />
+      <workItem from="1640512686759" duration="27585000" />
+      <workItem from="1640592125507" duration="56351000" />
     </task>
     <servers />
   </component>

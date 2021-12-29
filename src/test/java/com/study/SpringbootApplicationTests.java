@@ -45,7 +45,6 @@ class SpringbootApplicationTests {
   public void query() {
     //System.out.println(userService.getById(10));
     System.out.println(userService.list(null));
-
   }
 
   @Test

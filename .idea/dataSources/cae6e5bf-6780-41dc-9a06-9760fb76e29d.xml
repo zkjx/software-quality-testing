@@ -934,122 +934,177 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <collation id="273" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="274" parent="1" name="db_fmmall">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
-    </schema>
-    <schema id="275" parent="1" name="db_jdbc">
-      <Collation>utf8mb4_0900_ai_ci</Collation>
-    </schema>
-    <schema id="276" parent="1" name="db_jxc">
+    <schema id="274" parent="1" name="db_blog">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="277" parent="1" name="db_jxc_test">
+    <schema id="275" parent="1" name="db_fmmall">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="276" parent="1" name="db_jdbc">
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </schema>
+    <schema id="277" parent="1" name="db_jxc">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="278" parent="1" name="db_springboot">
+    <schema id="278" parent="1" name="db_jxc_test">
+      <Collation>utf8_general_ci</Collation>
+    </schema>
+    <schema id="279" parent="1" name="db_springboot">
       <Collation>utf8mb4_0900_ai_ci</Collation>
       <Current>1</Current>
     </schema>
-    <schema id="279" parent="1" name="db_wms_bs">
+    <schema id="280" parent="1" name="db_wms_bs">
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
-    <schema id="280" parent="1" name="information_schema">
+    <schema id="281" parent="1" name="information_schema">
       <Collation>utf8_general_ci</Collation>
     </schema>
-    <schema id="281" parent="1" name="mysql">
+    <schema id="282" parent="1" name="mysql">
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
-    <schema id="282" parent="1" name="performance_schema">
+    <schema id="283" parent="1" name="performance_schema">
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
-    <schema id="283" parent="1" name="sys">
+    <schema id="284" parent="1" name="sys">
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
-    <user id="284" parent="1" name="mysql.infoschema">
+    <user id="285" parent="1" name="mysql.infoschema">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="285" parent="1" name="mysql.session">
+    <user id="286" parent="1" name="mysql.session">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="286" parent="1" name="mysql.sys">
+    <user id="287" parent="1" name="mysql.sys">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="287" parent="1" name="root">
+    <user id="288" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="288" parent="278" name="persistent_logins"/>
-    <table id="289" parent="278" name="user"/>
-    <column id="290" parent="288" name="username">
+    <table id="289" parent="279" name="persistent_logins"/>
+    <table id="290" parent="279" name="user"/>
+    <table id="291" parent="279" name="user_copy"/>
+    <column id="292" parent="289" name="username">
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="291" parent="288" name="series">
+    <column id="293" parent="289" name="series">
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="292" parent="288" name="token">
+    <column id="294" parent="289" name="token">
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="293" parent="288" name="last_used">
+    <column id="295" parent="289" name="last_used">
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <key id="294" parent="288" name="PRIMARY">
+    <key id="296" parent="289" name="PRIMARY">
       <ColNames>series</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
     </key>
-    <column id="295" parent="289" name="user_id">
+    <column id="297" parent="290" name="user_id">
       <Comment>鐢ㄦ埛id</Comment>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="296" parent="289" name="user_name">
+    <column id="298" parent="290" name="user_name">
       <Comment>鐢ㄦ埛鍚�</Comment>
       <DataType>varchar(20)|0s</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>2</Position>
     </column>
-    <column id="297" parent="289" name="user_pwd">
+    <column id="299" parent="290" name="user_pwd">
       <Comment>鐢ㄦ埛瀵嗙爜</Comment>
       <DataType>varchar(20)|0s</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
       <Position>3</Position>
     </column>
-    <column id="298" parent="289" name="create_date">
+    <column id="300" parent="290" name="create_date">
       <Comment>鍒涘缓鏃堕棿</Comment>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>4</Position>
     </column>
-    <column id="299" parent="289" name="modify_date">
+    <column id="301" parent="290" name="modify_date">
       <Comment>淇敼鏃堕棿</Comment>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>5</Position>
     </column>
-    <column id="300" parent="289" name="enable">
+    <column id="302" parent="290" name="enable">
       <Comment>閫昏緫鍒犻櫎閲�</Comment>
       <DataType>int|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
       <Position>6</Position>
     </column>
-    <column id="301" parent="289" name="version">
+    <column id="303" parent="290" name="version">
       <Comment>涔愯閿佹爣閲�</Comment>
       <DataType>int|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
       <Position>7</Position>
     </column>
-    <key id="302" parent="289" name="PRIMARY">
+    <key id="304" parent="290" name="PRIMARY">
+      <ColNames>user_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+    </key>
+    <column id="305" parent="291" name="user_id">
+      <Comment>鐢ㄦ埛id</Comment>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="306" parent="291" name="user_name">
+      <Comment>鐢ㄦ埛鍚�</Comment>
+      <DataType>varchar(20)|0s</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <Position>2</Position>
+    </column>
+    <column id="307" parent="291" name="user_pwd">
+      <Comment>鐢ㄦ埛瀵嗙爜</Comment>
+      <DataType>varchar(20)|0s</DataType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <Position>3</Position>
+    </column>
+    <column id="308" parent="291" name="create_date">
+      <Comment>鍒涘缓鏃堕棿</Comment>
+      <DataType>datetime|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>4</Position>
+    </column>
+    <column id="309" parent="291" name="modify_date">
+      <Comment>淇敼鏃堕棿</Comment>
+      <DataType>datetime|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>5</Position>
+    </column>
+    <column id="310" parent="291" name="enable">
+      <Comment>閫昏緫鍒犻櫎閲�</Comment>
+      <DataType>int|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="311" parent="291" name="version">
+      <Comment>涔愯閿佹爣閲�</Comment>
+      <DataType>int|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <key id="312" parent="291" name="PRIMARY">
       <ColNames>user_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>

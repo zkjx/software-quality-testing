@@ -1,0 +1,710 @@
+@charset "utf-8";
+/*重置样式*/
+blockquote,body,button,dd,div,dl,dt,fieldset,figure,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,menu,p,pre,select,td,textarea,th,ul {
+	margin:0;
+	padding:0;
+	outline:0;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight:400;
+}
+i, cite, em, var, address, dfn {
+	font-style: normal;
+}
+ul,li {
+	list-style:none;
+}
+ol>li {
+	list-style:unset;
+}
+button:focus,input:focus,select:focus,textarea:focus {
+	outline:none;
+}
+button,html input[type=button],input[type=reset],input[type=submit] {
+	-webkit-appearance:button;
+}
+textarea {
+	overflow:hidden;
+	vertical-align:top;
+	overflow-y: auto;
+}
+input[type=search] {
+	-webkit-appearance:none;
+}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration {
+	display:none;
+}
+input[type="text"], input[type="password"], textarea {
+	border: 1px solid #ccc;
+	outline: none;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px white inset;
+}
+input, textarea {
+	-webkit-transition: color .2s;
+	-moz-transition: color .2s;
+	-ms-transition: color .2s;
+	-o-transition: color .2s;
+	transition: color .2s;
+	-webkit-transition: border-color .2s;
+	-moz-transition: border-color .2s;
+	-ms-transition: border-color .2s;
+	-o-transition: border-color .2s;
+	transition: border-color .2s;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	border:none;
+	vertical-align:top;
+}
+a {
+	text-decoration:none;
+}
+a:-webkit-any-link, a:any-link {
+	cursor: pointer;
+}
+a:active,a:hover,a:link,a:visited {
+	text-decoration:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+html {
+	width:100%;
+	height: 100%;
+	font-size:100%;
+	-webkit-text-size-adjust:none;
+	-ms-text-size-adjust:none;
+	-webkit-tap-highlight-color:transparent;
+}
+body {
+	height: 100%;
+	font: 13px/1.5 PingFangSC-Regular,Helvetica,Arial,Microsoft Yahei,sans-serif;
+}
+input, textarea, select, button {
+	font-family: microsoft yahei,Helvetica,Microsoft Jhenghei,Heiti TC,PingFang TC,sans-serif;
+	border-radius:0;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*通用属性*/
+/*临时的*/
+.javaex-temp-relative{position: relative;}
+/*宽度100%*/
+.full{width: 100%;}
+/*边距*/
+.mt-10{margin-top:10px;}
+.mr-10{margin-right:10px;}
+.mb-10{margin-bottom:10px;}
+.ml-10{margin-left:10px;}
+.pt-10{padding-top:10px;}
+.pr-10{padding-right:10px;}
+.pb-10{padding-bottom:10px;}
+.pl-10{padding-left:10px;}
+.mt-20{margin-top:20px;}
+.mr-20{margin-right:20px;}
+.mb-20{margin-bottom:20px;}
+.ml-20{margin-left:20px;}
+.pt-20{padding-top:20px;}
+.pr-20{padding-right:20px;}
+.pb-20{padding-bottom:20px;}
+.pl-20{padding-left:20px;}
+/*隐藏*/
+.hide{display:none !important;}
+.vh{visibility: hidden !important;}
+/*浮动*/
+.fl{float: left;}
+.fr{float: right;}
+/*对齐*/
+.tl{text-align: left;}
+.tr{text-align: right;}
+.tc{text-align: center;}
+/*清浮动*/
+.clear:before, .clear:after{display:table;content:" ";line-height:0}
+.clear:after{clear:both}
+span.clearfix{display: block; margin: 0; padding: 0; height: auto; line-height: 0; zoom: 1; clear: both;}
+/*圆角*/
+.radius-3{border-radius: 3px;}
+.radius-5{border-radius: 5px;}
+.radius-8{border-radius: 8px;}
+
+/*栅格系统*/
+.javaex-grid{-webkit-box-orient: horizontal;-moz-box-orient: horizontal;box-orient: horizontal;display: -webkit-flex;display: -moz-flex;display: flex;}
+.javaex-grid > div{-webkit-box-flex: 1;-moz-box-flex: 1;box-flex: 1;}
+.javaex-grid .javaex-grid-1{width: calc(100% / 12);}
+.javaex-grid .javaex-grid-2{width: calc(calc(100% / 12) * 2);}
+.javaex-grid .javaex-grid-3{width: calc(calc(100% / 12) * 3);}
+.javaex-grid .javaex-grid-4{width: calc(calc(100% / 12) * 4);}
+.javaex-grid .javaex-grid-5{width: calc(calc(100% / 12) * 5);}
+.javaex-grid .javaex-grid-6{width: calc(calc(100% / 12) * 6);}
+.javaex-grid .javaex-grid-7{width: calc(calc(100% / 12) * 7);}
+.javaex-grid .javaex-grid-8{width: calc(calc(100% / 12) * 8);}
+.javaex-grid .javaex-grid-9{width: calc(calc(100% / 12) * 9);}
+.javaex-grid .javaex-grid-10{width: calc(calc(100% / 12) * 10);}
+.javaex-grid .javaex-grid-11{width: calc(calc(100% / 12) * 11);}
+.javaex-grid .javaex-grid-12{width:100%;}
+.javaex-grid.spacing-10{width: calc(100% + 10px);}
+.javaex-grid.spacing-10 [class^="javaex-grid-"]{margin-right: 10px;}
+.javaex-grid.spacing-20{width: calc(100% + 20px);}
+.javaex-grid.spacing-20 [class^="javaex-grid-"]{margin-right: 20px;}
+
+/*等分系统*/
+[class^="javaex-equal-"] > li{float: left;}
+.javaex-equal-1 > li{width:100%;}
+.javaex-equal-2 > li{width: calc(100% / 2);}
+.javaex-equal-3 > li{width: calc(100% / 3);}
+.javaex-equal-4 > li{width: calc(100% / 4);}
+.javaex-equal-5 > li{width: calc(100% / 5);}
+.javaex-equal-6 > li{width: calc(100% / 6);}
+.javaex-equal-7 > li{width: calc(100% / 7);}
+.javaex-equal-8 > li{width: calc(100% / 8);}
+.javaex-equal-9 > li{width: calc(100% / 9);}
+.javaex-equal-10 > li{width: calc(100% / 10);}
+.javaex-equal-11 > li{width: calc(100% / 11);}
+.javaex-equal-12 > li{width: calc(100% / 12);}
+
+/*导航*/
+.javaex-navbar{font-size: 14px;border: none;transition: opacity .6s ease, background .6s ease, box-shadow .6s ease;box-shadow: none;height: 64px;top: 0;position: fixed;right: 0;left: 0;z-index: 100;}
+.javaex-navbar .javaex-container-fluid{margin-right: auto;margin-left: auto;padding-left: 15px;padding-right: 15px;}
+.javaex-navbar .javaex-logo{float: left;min-height: 64px;line-height: 64px;font-size: 24px;}
+.javaex-navbar .javaex-logo > a{display: inline-block;height: auto;padding-top: 7px;padding-bottom: 7px;}
+.javaex-navbar .javaex-nav{margin-left: 20px;}
+.javaex-navbar .javaex-nav > li{float: left;display: block;position: relative;padding: 0 15px;height: 64px;line-height: 64px;}
+.javaex-navbar .javaex-nav > li > a{display: block;position: relative;height: 64px;line-height: 64px;padding: 0 15px;}
+.javaex-navbar .javaex-nav > li > a::after{position: absolute;bottom: 20px;left: 14px;right: 14px;height: 2px;content: '';opacity: 0;-webkit-transition: -webkit-transform 0.2s ease-in;transition: transform 0.1s ease-in;-webkit-transform: scale3d(0, 1, 1);transform: scale3d(0, 1, 1);}
+.javaex-navbar .javaex-nav > li:hover > a::after, .javaex-navbar .javaex-nav > li.active > a::after{opacity: 1;-webkit-transform: scale3d(1, 1, 1);transform: scale3d(1, 1, 1);}
+.javaex-navbar .javaex-nav > li > ul.javaex-nav-dropdown-menu{display: none;position: absolute;top: 64px;width: auto;padding: 0;border: 0;overflow: hidden;transition: all 0s;opacity: 1;z-index: 1000;text-align: left;border-bottom-left-radius: 3px;border-bottom-right-radius: 3px;}
+.javaex-navbar .javaex-nav > li:hover > ul.javaex-nav-dropdown-menu{display:block;}
+.javaex-navbar .javaex-nav > li > ul.javaex-nav-dropdown-menu li a{line-height: 36px;padding-left: 15px;background-size: 24px;background-repeat: no-repeat;background-position: 10px 8px;display: block;padding: 3px 20px;clear: both;font-weight: normal;white-space: nowrap;}
+.javaex-navbar .javaex-nav > li > ul.javaex-nav-dropdown-menu li a:hover{color: #1B8AFA;background-color: rgba(239, 239, 239, 0.15);}
+
+/*左侧固定*/
+.javaex-aside{float: left;width: 220px;font-size: 14px;font-family: "Helvetica Neue",Helvetica,PingFangSC-Regular,Arial,"Hiragino Sans GB","Heiti SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+.javaex-aside-fixed{position: fixed;top: 64px;left: 0;bottom: 0;z-index: 5;}
+.javaex-aside h1{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.javaex-aside h1::after{content: '';height: 1px;width: 100%;opacity: .1;display: block;}
+.javaex-aside h1 .javaex-nav-name{font-size: 16px;line-height: 50px;padding: 0 20px;width: 144px;}
+.javaex-toc{padding-top: 10px;overflow: hidden;text-overflow: ellipsis;-o-text-overflow: ellipsis;white-space: nowrap;}
+
+/*菜单*/
+.javaex-menu-container{width: 220px;height: 100%;overflow: unset;z-index: 1000;}
+.javaex-menu-container .javaex-menu{margin-top: 0; width: 100%;height: 100%;overflow: auto;}
+.javaex-menu::-webkit-scrollbar {display:none}
+.javaex-menu-container .javaex-menu a{display: block; width: 100%;font-weight: 400; height: 44px; line-height: 44px; padding-left: 25px;}
+.javaex-menu li.javaex-menu-item li a{padding-left: 44px;}
+.javaex-menu .javaex-menu-item > a > span{margin-right: 20px;}
+.javaex-menu .javaex-menu-item a > i{font-style:normal;position: absolute;right: 25px; top: 13px; font-size: 18px;-webkit-transition: -webkit-transform .3s;transition: -webkit-transform .3s;transition: transform .3s; transition: transform .3s,-webkit-transform .3s;}
+.javaex-menu .javaex-menu-item.javaex-menu-show a > i{font-style:normal;transform: rotate(-180deg);}
+.javaex-menu .javaex-menu-item{position: relative;display: block;}
+.javaex-menu .javaex-menu-item ul{display: none;}
+.javaex-menu .javaex-menu-item.javaex-menu-show ul{display: block;}
+
+/*iframe框架布局*/
+.javaex-main-container{position: absolute;top: 64px;bottom: 0;left: 0;right: 0;padding-left: 220px;}
+.javaex-markdown{overflow: auto;height: 100%;}
+.javaex-markdown iframe{width: 100%;height: 100%;border: 0;margin: 0;padding: 0;}
+
+/*主体内容布局*/
+.javaex-block{position: relative;margin: 0 auto 20px;padding: 0;width: 100%;}
+.javaex-block .javaex-banner{font-size: 14px; height: 44px; line-height: 44px; vertical-align: middle; padding-left: 20px;display: -ms-flexbox;display: flex;-ms-flex-direction: row; flex-direction: row;-ms-flex-align: center;align-items: center;}
+.javaex-block .javaex-block-fixed{width: 2px; height: 16px; margin-left: -20px; margin-right: 18px;}
+.javaex-list-toolbar{margin-bottom: 10px;clear: both;}
+.javaex-main{padding:20px;}
+.javaex-main-10{padding:10px;}
+.javaex-divider{height: 1px; border: none; margin: 8px auto;flex-shrink: 0;}
+.javaex-search-wrapper{padding: 16px 0;margin-bottom: 10px;}
+.javaex-search-wrapper .javaex-search-line:not(:last-child){margin-bottom: 10px;}
+.javaex-search-wrapper .javaex-search-control{display: inline-block; margin-left: 20px;}
+.javaex-search-wrapper .javaex-search-control.javaex-search-submit{float: right; margin-right: 20px;}
+
+/*面包屑导航*/
+.javaex-breadcrumb{height: 50px;line-height: 50px;padding-left: 0; font-size: 14px; margin-bottom: 10px;}
+.javaex-breadcrumb .divider{margin: 0 3px;}
+
+/*页面元素*/
+/*输入框*/
+input.javaex-text{font-size: 100%;height: 32px;line-height: 32px;padding: 0 10px;}
+.javaex-search-group input.javaex-text{vertical-align: middle;}
+blockquote.javaex-quote{font-size: 16px; display: block; padding: 16px; margin: 0 0 24px; overflow: auto; word-wrap: normal; word-break: normal;}
+.javaex-fieldset{padding: 0; margin-bottom: 20px; border-width: 1px; border-style: solid;}
+.javaex-fieldset legend{margin-left: 20px; padding: 0 10px; font-size: 18px; font-weight: 200;}
+.javaex-fieldset .javaex-fieldset-box{padding:10px 20px;}
+.javaex-fieldset.javaex-fieldset-line{border: none;border-top: 1px solid #e5e5e5;}
+
+/*按钮*/
+.javaex-btn{font-size: 13px;height: 32px;line-height: 32px;padding: 0 17px;text-align: center;vertical-align: middle;user-select: none;display: inline-block;cursor: pointer;border-width: initial;border-style: none;border-color: initial;border-image: initial;outline: none;}
+.javaex-btn.empty{line-height: 30px;}
+.javaex-btn.mini{padding: 0 8px;height: 24px;line-height: 24px;font-size: 12px;}
+.javaex-btn.empty.mini{line-height: 22px;}
+.javaex-group-button{display: inline-block;font-size: 0;white-space: nowrap;vertical-align: middle;}
+.javaex-btn.yes{width: 120px;line-height: 36px;height: 36px;font-size: 14px;}
+.javaex-btn.no{width: 120px;margin-left:20px;line-height: 34px;height: 36px;font-size: 14px;}
+.javaex-unit .javaex-btn.yes, .javaex-unit .javaex-btn.no{margin: 0 10px;}
+
+/*单选框和复选框*/
+/*普通样式*/
+.javaex-fill, .javaex-fake{display: none;}
+.javaex-fill-label{position: relative;display: inline-block; font-size: 14px; line-height: 16px;}
+.javaex-fill-label .javaex-fill-text{display: inline-block; margin-left: 4px; vertical-align: initial; cursor: pointer;}
+input[type="radio"].javaex-fill ~ .javaex-fill-text{vertical-align: top;}
+input[type="radio"].javaex-fill ~ .javaex-fill-css{position: relative;display: inline-block; width: 16px; height: 16px; cursor: pointer; border-radius: 50%;transition: all .1s cubic-bezier(.78,.14,.15,.86);}
+input[type="checkbox"].javaex-fill ~ .javaex-fill-css{display: inline-block; width: 16px; height: 16px; cursor: pointer;transition: all .1s cubic-bezier(.78,.14,.15,.86);}
+input[type="radio"].javaex-fill:disabled ~ .javaex-fill-css, input[type="checkbox"].javaex-fill:disabled ~ .javaex-fill-css{cursor: not-allowed;}
+input[type="radio"].javaex-fill:checked[disabled] ~ .javaex-fill-css, input[type="checkbox"].javaex-fill:checked[disabled] ~ .javaex-fill-css{cursor: not-allowed;}
+input[type="radio"].javaex-fill:checked ~ .javaex-fill-css.javaex-radio-check:after{transform: scale(1);opacity: 1;transition: all .3s cubic-bezier(.78,.14,.15,.86);}
+.javaex-radio-check:after{position: absolute; top: 3px; left: 3px; display: table; width: 8px; height: 8px; border-top: 0; border-left: 0; border-radius: 8px; transform: scale(0); opacity: 0; transition: all .3s cubic-bezier(.78,.14,.15,.86); content: " ";}
+
+/*开关样式复选框*/
+.javaex-switch{width: 64px !important;height: 28px !important;position: relative;border-radius: 14px;display: inline-block;-webkit-appearance: none;-moz-appearance:none;appearance:none;-webkit-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;outline: none;cursor:pointer;}
+.javaex-switch:before{content: "√×";width: 100%;color: #fff;position: absolute;letter-spacing: 20px;top: 5px;left: 14px;transition: left 0.3s;}
+.javaex-switch:after{content: " ";width: 24px;height: 24px;position: absolute;top: 2px;left: 2px;border-radius: 14px;background-color: #fff;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);transition: left 0.3s;}
+.javaex-switch:checked:after{left: 38px;}
+
+/*select下拉选择框样式*/
+.javaex-select-box{position: relative;display: inline-block;}
+.javaex-select{vertical-align: middle;font-size: 100%;cursor: pointer;height: 32px;line-height: 32px; padding: 0 10px;text-align: left;min-width: 180px;width: auto;outline: none;-webkit-transition: border-color .2s;-moz-transition: border-color .2s;-ms-transition: border-color .2s;-o-transition: border-color .2s;transition: border-color .2s;}
+div.javaex-select{display: inline-block;height: 30px; line-height: 30px;}
+div.javaex-select .javaex-btn{margin: 0 5px 3px 0;}
+.javaex-select-ul{text-align: left;display: none;width: 100%;font-size:100%;overflow-y:auto;overflow-x:hidden;position:absolute;left: 0;z-index:1002;padding:0;margin:0;list-style:none;}
+.javaex-select-ul::-webkit-scrollbar{-webkit-appearance:none;width:8px}
+.javaex-select-ul::-webkit-scrollbar-thumb{border-radius:4px;}
+.javaex-select-ul .javaex-divider{margin: 2px 10px;}
+.javaex-select-ul-item{font-size: 13px;cursor: pointer;padding:0 10px;line-height:28px;cursor:pointer;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-ms-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s;}
+.javaex-select-ul-item:disabled, .javaex-select-ul-item.javaex-disabled{cursor: not-allowed!important;}
+.javaex-select-close{position: absolute; right: 8px; font-size: 16px; top: 8px; cursor: pointer; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s;}
+.javaex-select-close.javaex-select-open{-webkit-transform: rotate(180deg); transform: rotate(180deg);}
+.javaex-select-ul-item .javaex-fill-label{width: 100%;line-height: 26px;vertical-align: middle;cursor: pointer;}
+
+/*表格*/
+.javaex-table{border-collapse:collapse;border-spacing:0;width:100%;text-align:left;table-layout: fixed;}
+.javaex-table td{padding:10px 16px;line-height:20px;word-wrap: break-word; word-break:break-all;vertical-align: middle;}
+.javaex-table th{vertical-align: middle;font-weight: 400; height: 40px; line-height: 40px; padding: 0 16px;}
+.javaex-table th .javaex-fill-label, .javaex-table td .javaex-fill-label{display: block;cursor: pointer;}
+.javaex-table tr{transition: all .25s;-webkit-transition: all .25s;}
+.javaex-table.th-c th, .javaex-table.td-c td{text-align: center;}
+.javaex-table.th-c-1 th:first-child, .javaex-table.td-c-1 td:first-child{text-align: center;}
+.javaex-table.th-c-2 th:nth-child(2), .javaex-table.td-c-2 td:nth-child(2){text-align: center;}
+.javaex-table input{width:100%;}
+.javaex-table .javaex-table-filter-col{width:48px;text-align:center;}
+.javaex-table .javaex-table-num-col{width:60px;}
+.javaex-fixed-table-parent{overflow-x:auto;}
+.javaex-table-sort-svg{width: 16px; height: 16px; vertical-align: middle; margin-left: 5px; cursor: pointer!important;}
+.javaex-table-sort-svg .javaex-table-sort-icon{opacity: 0.3;filter: alpha(opacity=30);}
+.javaex-table span.javaex-tree-icon{margin-left: -8px;}
+
+/*侧边栏*/
+.javaex-drawer{display: none;position: fixed;top: 0;bottom: 0;z-index: 1005;transform: translateX(0px);transition: 150ms cubic-bezier(0.165, 0.84, 0.44, 1);}
+.javaex-drawer .javaex-drawer-header{padding: 0 20px; height: 50px; line-height: 50px;}
+.javaex-drawer .javaex-drawer-header .javaex-drawer-title{width: 80%; display: inline-block; font-size: 16px; height: 100%;}
+.javaex-drawer .javaex-drawer-header .javaex-drawer-close{cursor: pointer; font-size: 20px; height: 100%; display: flex; align-items: center; justify-content: space-between; float: right;}
+.javaex-drawer .javaex-drawer-content{height: calc(100% - 50px);}
+
+/*tab选项卡切换*/
+.javaex-tab{overflow: hidden;}
+.javaex-tab .javaex-tab-title{position: relative;height:42px;}
+.javaex-tab .javaex-tab-title em{font-style:normal;float: left;margin-right:20px;font-size: 22px;line-height: 42px;}
+.javaex-tab .javaex-tab-title li{cursor: pointer;text-align: center;float: left;margin-right:15px;height: 42px;line-height: 42px;display: block;text-decoration: none;transition: none;}
+.javaex-tab .javaex-tab-content{width: 100%;overflow-x: hidden;}
+.javaex-tab .javaex-tab-content>div{width: 100%;overflow-x: hidden;display: none;}
+.javaex-tab .javaex-tab-mod-icon{float: left;margin-right:10px;}
+.javaex-tab .javaex-tab-title .javaex-tab-mod-icon{float: left;margin:4px 10px 0 0;}
+.javaex-tab .javaex-tab-title .javaex-tab-more{float: right;margin-top: 8px;font-size: 14px;}
+.javaex-tab.javaex-tab-nav-top .javaex-tab-title, .javaex-tab.javaex-tab-nav-bottom .javaex-tab-title{height: 46px;}
+.javaex-tab.javaex-tab-nav-top .javaex-tab-title li{height: 46px;line-height: 46px;font-size: 16px; padding: 0 20px;}
+.javaex-tab.javaex-tab-nav-bottom .javaex-tab-title li{height: 46px;line-height: 46px;font-size: 16px; padding: 0 20px;}
+.javaex-tab.javaex-tab-card-tail .javaex-tab-title li {padding: 0 20px;margin-right:0;}
+.javaex-tab.javaex-tab-card .javaex-tab-title li {padding: 0 20px;margin: 0 2px 2px 0;}
+.javaex-tab.javaex-tab-card .javaex-tab-content {margin-top: 2px; background-color: #fff;}
+
+/*评分*/
+.javaex-score{position:relative;display: inline-block;font-size: 18px;}
+.javaex-score li{list-style: none;display: inline-block;cursor: pointer;}
+.javaex-score .javaex-score-star{display: inline-block;font: normal normal normal 14px/1 FontAwesome;text-rendering: auto;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+
+/*日期选择框*/
+.javaex-date-container{position: relative;display: inline-block;}
+.javaex-date-container .icon-calendar{position: absolute;top: 8px;font-size: 16px;}
+.javaex-date, .javaex-time{vertical-align: middle;width: 220px;height: 32px;line-height: 32px;font-size: 100%; text-indent: 10px;cursor: pointer;display: inline-block;}
+.javaex-time{width: 100px;}
+.javaex-date-main{position:absolute;z-index:100;}
+.javaex-date-main td.javaex-data-choice-style{background-position:-72px 0;}
+.javaex-date-main td.javaexDateRangeGray{cursor: default;}
+.javaex-date-main td.started{background-position:-36px 0;}
+.javaex-date-main td.ended{background-position:-108px 0;}
+.javaex-date-main table{float:left;margin: 0 8px;}
+.javaex-date-main table caption{ text-align:center; height:30px; line-height:30px; font-size:14px;}
+.javaex-date-main table thead th{line-height: 20px;padding: 4px 10px; text-align:left;font-weight: 400;}
+.javaex-date-main table tbody td{line-height: 20px;padding: 4px 11px;text-align:center;white-space:nowrap;font-size: 12px; font-family:"Tahoma";}
+.javaex-date-body{position:relative;margin: 10px 8px;}
+.javaex-date-footer{padding-top: 10px;margin: 10px 16px;}
+.javaex-date-footer .javaex-data-form-btn{text-align: right;}
+.javaex-date-footer .javaex-data-form-btn .javaex-btn{margin-left: 5px;}
+.javaex-date-footer .javaex-data-form-btn{padding-left:10px;vertical-align:middle;}
+.javaex-date-main td, .javaex-date-ui li{cursor: pointer;}
+.javaex-date-main td.javaexDateRangeGray:hover{cursor: not-allowed;}
+.javaex-date-ui ul::-webkit-scrollbar{-webkit-appearance:none;width:7px}
+.javaex-date-ui ul::-webkit-scrollbar-thumb{border-radius:4px;}
+.javaex-date-main table caption a {display: inline-block;font-size: 20px;}
+.javaex-date-double-right{margin-left:10px; float: right;}
+.javaex-date-right{margin-left:5px; float: right;}
+.javaex-date-double-left{margin-right:10px; float: left;}
+.javaex-date-left{margin-right:5px; float: left;}
+
+/*静态提示*/
+.javaex-toast{display: block; padding: 8px 10px; font-size: 12px;}
+
+/*表单样式*/
+.javaex-unit{margin-bottom: 24px;}
+.javaex-unit .javaex-unit-left{width: 80px;float: left;height: 32px;line-height: 32px;}
+.javaex-unit .javaex-unit-left .subtitle{text-align: right;}
+.javaex-unit .javaex-unit-left.tl .subtitle{text-align: left; margin-left: 20px;}
+.javaex-unit .javaex-unit-left .required::before{content: '*'; font-size: 14px; color: #f00; text-align: right; line-height: 32px; margin-right: 8px;}
+.javaex-unit .javaex-unit-left.tl .required::before{margin-left: -14px;}
+.javaex-unit .javaex-unit-right{margin-left: 90px;line-height: 32px;}
+.javaex-unit input.javaex-text{width: 100%;}
+.javaex-unit .input-group input.javaex-text{width: auto;}
+.javaex-unit .javaex-fill-label{vertical-align: middle;}
+.javaex-unit .javaex-unit-right .javaex-btn{height: 32px;line-height: 32px;margin-top: -3px;padding: 0 15px;}
+.javaex-unit .javaex-unit-right .javaex-btn.mini{height: 24px;line-height: 24px;margin-top: 0; padding: 0 8px;}
+.javaex-hint{font-size: 12px;}
+.javaex-tagator{width: 100%; height: 78px; line-height: 20px; display: inline-block; text-decoration: none; overflow-y: auto;}
+.javaex-tagator .javaex-tags{display: inline-block;}
+.javaex-tag-input{display: inline-block; box-shadow: none; padding: 4px; font-size: 13px; line-height: 13px; margin: 0 5px 5px 0; vertical-align: middle; max-width: 200px; min-width: 130px; text-indent: 0;border: none; outline: none;width: 20px;}
+.javaex-tags .javaex-tag{display: inline-block; border-radius: 2px; padding: 2px 20px 2px 4px; font-size: 13px; margin: 0 5px 5px 0; position: relative; vertical-align: middle; max-width: 200px; overflow: hidden; text-overflow: ellipsis;}
+.javaex-tag-remove{font-family: simsun; display: inline-block; font-weight: bold; margin: 0 0 0 5px; padding: 6px 2px 4px 2px; cursor: pointer; font-size: 12px; line-height: 10px; vertical-align: top; border-radius: 0 2px 2px 0; position: absolute; right: 0; top: 0; bottom: 0;}
+textarea.javaex-desc, div.javaex-tagbox{font-size: 100%;width: 100% !important;padding: 10px;min-height: 100px;outline: none;}
+textarea.javaex-desc{overflow-y: auto;}
+.javaex-unit .javaex-unit-right .javaex-edit-container{padding: 10px;}
+.javaex-unit .javaex-unit-right .javaex-edit-container .javaex-edit-toolbar{margin: -10px -10px 0 -10px;}
+.javaex-unit .javaex-unit-right .javaex-edit-container .javaex-edit-body{margin: 0 -10px -10px;}
+
+/*底部固定*/
+.javaex-page-wrap{height: 100%;}
+.javaex-page-wrap .javaex-page-header{padding: 0 20px;}
+.javaex-page-wrap .javaex-page-content{display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; height: 100%; padding: 0;}
+.javaex-page-wrap .javaex-page-content .javaex-page-body{-ms-flex: 1; flex: 1; word-wrap: break-word; overflow: auto;}
+.javaex-page-wrap .javaex-page-content .javaex-page-footer{margin: 0 20px;padding: 12px 0; text-align: right;}
+.javaex-page-footer .javaex-btn{padding: 0 24px; margin: 0 0 0 4px;}
+
+/*表单验证的错误样式*/
+.javaex-error-parent{position: relative;}
+.javaex-form-error{font-size: 12px;line-height: 22px;transition: color .3s cubic-bezier(.215,.61,.355,1);clear: both;position: absolute;left: 0;}
+.javaex-error-info{color: #f94343;font-size: 12px;-webkit-animation: javaexShake 5s 1s ease infinite;-moz-animation: javaexShake 5s 1s ease infinite;}
+
+/*删除弹出层*/
+.javaex-win{position: absolute; margin: 0; padding: 0;}
+.javaex-win-hint{width: auto; height: auto; line-height: normal; border: none; box-shadow: none; text-shadow: none;}
+.javaex-win-hint .javaex-error-text{margin: 0; padding: 8px 16px; min-width: 120px; max-width: 640px; width: auto; background-color: transparent; font-weight: bold;}
+.javaex-win .javaex-error-text{position: relative; top: 0; left: 0; overflow: hidden; height: auto; text-align: left;}
+.javaex-win-hint .javaex-tail{border: 4px solid; position: absolute; display: block;top: auto; left: 16px; border-right: 4px solid transparent; border-bottom: 4px solid transparent; border-left: 4px solid transparent;}
+
+/*分类筛选*/
+.javaex-classify-list{line-height: 1;margin-top: 10px;}
+.javaex-classify-list .javaex-classify-title{min-width: 50px;display: inline-block;vertical-align: top;padding: 8px 0;}
+.javaex-classify-list .javaex-classify-list-outer{display: inline-block;width: calc(100% - 100px);}
+.javaex-classify-list .javaex-classify-ul{height: 100%;}
+.javaex-classify-list .javaex-classify-li{margin-right: 10px;position: relative;display: inline-block;cursor: pointer;margin-bottom: 12px;}
+li.javaex-classify-li{display: inline-block;cursor: pointer;line-height: normal;}
+li.javaex-classify-li .javaex-classify-letter{display: inline-block;border-radius: 2px;padding: 5px 12px;}
+
+/*分页*/
+.javaex-page{height: 30px;}
+.javaex-page ul{list-style: none; padding: 0; margin: 0;margin-right: -3px;}
+.javaex-pagination{display:inline-block;}
+.javaex-pagination>li{display:inline;display: block;float: left;}
+.javaex-pagination>li>a{float:left;padding: 0px 10px;height: 30px;line-height: 30px;text-decoration:none; cursor: pointer;border: 0;}
+.javaex-pagination>li:first-child>a{margin-left:0;}
+.javaex-pagination>li:last-child>a{border-radius: 0;}
+.javaex-pagination>li>a:focus,.javaex-pagination>li>a:hover{z-index:2;}
+.javaex-pagination>.active>a, .javaex-pagination>.active>a:focus, .javaex-pagination>.active>a:hover{z-index:3;cursor: default;}
+.javaex-pagination>.disabled>a, .javaex-pagination>.disabled>a:focus, .javaex-pagination>.disabled>a:hover{cursor:not-allowed;}
+.javaex-pagination .javaex-hint{float: left; margin: 0 8px 0 0; height: 30px; color: #999; text-align: left; font-size: 12px; line-height: 30px;}
+.javaex-pagination .javaex-select{min-width: auto; line-height: 30px; height: 30px;}
+.javaex-pagination .javaex-pagination-input-pager{padding: 0 4px; height: 24px; border: 1px solid #bbb; background: #fff; color: #666; font-size: 12px; line-height: normal; margin: 0 4px; min-width: 0; width: 40px; text-align: right;}
+.javaex-pagination .javaex-pagination-input-pager:hover{border-color: #08c; box-shadow: 0 1px 2px rgba(0,0,0,0.15);}
+.javaex-pagination .javaex-btn-mini{padding: 0 8px; text-align: center; cursor: pointer; height: 24px; line-height: 22px;font-size: 12px;margin: 0 0 0 4px !important;}
+
+/*流加载*/
+.javaex-flow-box {padding: 12px 24px;}
+.javaex-flow-loading{background: url(../images/javaex-background.gif);background-size: auto;width: 462px;height: 67px;}
+
+/*数字选择器*/
+.javaex-numChose-wrap{display: inline-block;overflow: hidden;width: 132px;height: 32px;font-size: 0;}
+.javaex-numChose-left{font-size: 14px;cursor: pointer;text-align: center;width: 35px;height: 32px;line-height: 32px;float: left;}
+.javaex-numChose-right{font-size: 14px;cursor: pointer;text-align: center;width: 35px;height: 32px;line-height: 32px;float: right;}
+.javaex-numChose{border: none;width: 60px;height: 32px;line-height: 32px;padding: 0px;margin: 0px;text-align: center;vertical-align: middle;}
+
+/*进度条*/
+.javaex-progress{display: inline-block;width: 100%;line-height: 8px;text-align: left;background: #ccc;border-radius: 20px;-webkit-border-radius: 20px;-ms-border-radius: 20px;-moz-border-radius: 20px;-o-border-radius: 20px;overflow: hidden;}
+.javaex-progress .javaex-progress-level{text-align: right;display: inline-block;width: 0.01%;border-radius: 20px;-webkit-border-radius: 20px;-ms-border-radius: 20px;-moz-border-radius: 20px;-o-border-radius: 20px;}
+.javaex-progress .javaex-progress-level > span{color: #fff;padding-right: 20px;}
+
+/*验证码倒计时*/
+.javaex-code-disabled {pointer-events : none;}
+
+/*评论*/
+.javaex-comment .javaex-section-hd{float: left; display: inline;}
+.javaex-comment .javaex-avatar-img{border-radius: 50%; width: 50px; height: 50px;}
+.javaex-comment .javaex-comment-form{position: relative;margin-left: 70px;padding: 7px 14px 14px;margin-bottom: 30px;border-radius: 4px;}
+.javaex-comment .javaex-comment-form.noHd{margin: 14px 0 0 0;padding: 7px 14px 9px;}
+.javaex-comment .javaex-comment-form-textwrap{height: auto;margin-bottom: 0;}
+.javaex-comment .javaex-comment-textarea{width: 100%;min-height: 48px;font-size: 100%;box-shadow: none;margin-bottom: 14px;line-height: 20px;border: 0;outline: 0;resize: none;overflow: auto;outline: none;}
+.javaex-comment .javaex-comment-textarea::-webkit-scrollbar{width: 6px;}
+.javaex-comment .javaex-comment-textarea::-webkit-scrollbar-thumb{border-radius: 3px;}
+.javaex-comment .javaex-comment-textarea.javaex-comment-textarea-reply{height: 44px;padding: 10px;}
+.javaex-comment .javaex-comment-count-title{height: 20px;font-size: 20px;line-height: 20px; margin-bottom: 20px;}
+.javaex-comment .javaex-comment-count-title span{font-size: 16px;color: #999;margin-left: 10px;}
+.javaex-comment .javaex-avatar60 .face, .javaex-comment .javaex-avatar30 .face{width: 100%;height: 100%;border-radius: 50%;}
+.javaex-comment .javaex-comment-author{font-size: 15px; transition: all .2s;}
+.javaex-comment .javaex-comment-title{margin: 8px 0 11px;}
+.javaex-comment .javaex-comment-time{margin-right: 30px;font-size: 13px;height: 18px;line-height: 18px;}
+.javaex-comment .javaex-comment-conent{margin-bottom: 10px;font-size: 16px;line-height: 26px;word-wrap: break-word;}
+.javaex-comment .javaex-comment-c-conent{line-height: 20px;margin-bottom: 9px;}
+.javaex-comment .javaex-comment-c-reply{margin: 0 7px;font-size: 15px;}
+.javaex-comment .javaex-comment-c-text, .javaex-comment .javaex-comment-c-conent .javaex-comment-c-replyer{font-size: 15px;}
+.javaex-comment .javaex-comment-replyer-time{font-size: 12px;position: relative;}
+.javaex-comment .javaex-comment-left{float: left;text-align: center;}
+.javaex-comment .javaex-comment-right{padding-left: 70px;}
+.javaex-comment .javaex-comment-right.l40{padding-left: 40px;}
+.javaex-comment .javaex-comment-ul > li{position:relative;padding:20px 0;}
+.javaex-comment .javaex-comment-ul > li:first-child{border-top: unset;padding-top: 0;}
+.javaex-comment .javaex-comment-posr{padding: 10px 20px;}
+.javaex-comment .javaex-comment-posrs li .javaex-comment-c-item{padding-bottom: 20px;}
+.javaex-comment .javaex-comment-bottom{height: 16px;line-height: 16px;}
+.javaex-comment .javaex-comment-bottom a{font-size: 16px;margin-right: 30px; cursor: pointer; transition: color .2s; vertical-align: bottom;}
+.javaex-comment .javaex-comment-posrs{margin-top: 20px;}
+.javaex-comment .javaex-comment-submit-part{font-size: 14px;line-height: 26px;padding: 10px 20px;}
+.javaex-comment a.fold{white-space: nowrap;}
+.javaex-comment a.fold i{font-size: 16px;margin-top: 5px;display: inline-block;vertical-align: top;letter-spacing: 0;}
+.javaex-comment .javaex-comment-say-btn{border-radius: 2px;display: inline-block;height: 26px;padding: 0 19px;background-image: none;font-size: 14px;line-height: 24px;font-weight: normal;text-align: center;vertical-align: middle;cursor: pointer;white-space: nowrap;outline: none;transition: background-color .3s;}
+.javaex-comment .javaex-btn.javaex-comment-submit{width: 70px;height: 30px;line-height: 30px;font-size: 14px;text-align: center;border-radius: 3px;}
+
+/*弹出层*/
+.javaex-mask, .javaex-opt-mask{width: 100%;height: 100%;background: #000;opacity: .2;filter: alpha(opacity=20);position: fixed;left: 0;top: 0;z-index: 999;}
+.javaex-opt-mask{background:none;}
+.javaex-dialog{position: fixed;z-index: 10001;}
+.javaex-dialog .javaex-dialog-top{width: 100%;height: 40px;}
+.javaex-dialog .javaex-dialog-title{width: 70%;display: inline-block;font-size: 16px;line-height: 40px;padding-left: 20px;}
+.javaex-dialog .javaex-dialog-opt-icon{cursor: pointer; font-size: 20px;line-height: 40px; height: 40px; display:flex;align-items: center;justify-content: space-between;float: right; margin-right: 10px;}
+.javaex-dialog .javaex-dialog-opt-icon a{display: inline-block;width: 22px;text-align: center;}
+.javaex-dialog .javaex-dialog-close-big{position: absolute; top: 0; right: -49px; width: 49px; height: 49px; cursor: pointer; z-index: 1001;background-image: url(../images/javaex-close-big.png);-webkit-transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;-o-transition:all .3s;transition:all .3s}
+.javaex-dialog a.javaex-dialog-close-big:hover{transform:rotate(180deg);-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg)}
+.javaex-dialog .javaex-dialog-content{padding: 20px;font-size: 16px;}
+.javaex-dialog .javaex-dialog-content img{width:100%;height:100%;}
+.javaex-dialog .javaex-dialog-content .javaex-unit{font: 13px / 1.5 PingFangSC-Regular, Helvetica, Arial, "Microsoft Yahei", sans-serif;}
+.javaex-dialog .javaex-dialog-footer{margin: 0 20px 12px;    text-align: right;}
+.javaex-dialog .javaex-btn{margin-left:8px;}
+.javaex-dialog .javaex-dialog-resize{border-width: 8px; border-left-width: 0; border-style: double; transform: rotateZ(220deg); position: absolute; right: 0px; bottom: -4px; cursor: se-resize; -moz-user-select: none; -webkit-user-select: none;}
+.javaex-dialog .javaex-dialog-content.javaex-dialog-bg{background: url(../images/javaex-background.gif) no-repeat center center;}
+.javaex-dialog .javaex-dialog-content.javaex-dialog-window{padding:0.1px; height: calc(100% - 40px);}
+
+/*定位弹出层*/
+.javaex-panel{position: absolute;z-index: 100;}
+.javaex-panel-box{padding: 4px 0;width: 120px;}
+.javaex-panel-box p{font-size: 12px;font-weight: 400;line-height: 1.6;padding: 4px 16px;}
+.javaex-panel-box li{width: auto;height: auto;overflow: hidden;min-height: 32px;line-height: 1.75;padding-top: 4px;white-space: nowrap;padding-left: 16px;padding-right: 16px;letter-spacing: 0.00938em;padding-bottom: 4px;cursor: pointer;}
+.javaex-panel-box .javaex-divider{margin:8px 16px;}
+.javaex-panel.javaex-panel-right:before, .javaex-panel.javaex-panel-left:before{top: 50%;margin-top: -0.325em;position: absolute;content: '';width: 0.75em;height: 0.75em;-webkit-transform: rotate(45deg);transform: rotate(45deg);}
+.javaex-panel.javaex-panel-right:before{left: -0.325em;}
+.javaex-panel.javaex-panel-left:before{right: -0.325em;}
+.javaex-panel.javaex-animated-sideslip.alignment-right{-webkit-transform-origin:181px 0;-ms-transform-origin:181px 0;transform-origin:181px 0;}
+.javaex-panel.javaex-animated-sideslip.alignment-left{-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;}
+
+/*删除专用弹出层*/
+.javaex-danger-dialog{position: absolute; z-index: 1001; width: 320px; height: auto;border: none; background: rgba(0,0,0,0.8); text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.3);}
+.javaex-danger-dialog .javaex-btn{float: none; margin: 14px;}
+.javaex-danger-dialog span.icon{vertical-align: text-top;font-size: 14px;line-height: 1.5;}
+
+/*图片弹出层*/
+.javaex-allcover{top: 0; left: 0; z-index: 1001; width: 100%; height: 100%; background: rgba(0,0,0,0.9); cursor: pointer; position: fixed;}
+.javaex-area-window{top: 0; left: 0; z-index: 1002; overflow: visible; margin: 0 auto; padding: 0; width: 100%; height: 0;}
+.javaex-area-window .javaex-allcover-prev-image, .javaex-area-window .javaex-allcover-next-image{width: 64px; height: 64px; margin-top: -32px; line-height: 64px; text-align: center; font-size: 32px; font-weight: bold; color: #ccc; background-color: #eee; position: fixed; z-index: 1002; cursor: pointer; top: 50%; box-shadow: 0 1px 2px rgba(0,0,0,0.2);}
+.javaex-area-window .javaex-allcover-prev-image{left: 0; border-radius: 0 32px 32px 0;}
+.javaex-area-window .javaex-allcover-next-image{right: 0; border-radius: 32px 0 0 32px;}
+.javaex-area-window .javaex-allcover-prev-image .icon, .javaex-area-window .javaex-allcover-next-image .icon{margin: 0;}
+.javaex-area-window .javaex-area-tool-image{position: fixed; right: 0; top: 0; padding: 8px; z-index: 1003;}
+#javaex-box-image-manga{display: block; margin: 0; width: auto; height: auto; position: fixed; cursor: move; z-index: 1002;}
+#javaex-box-image-manga img{width: 100%; height: 100%; background-color: #fff; cursor: move;}
+#javaex-btn-quit-image{width: 130px; height: 30px; line-height: 28px; border-radius: 100px; background-color: #fd4c5b;border: 1px solid #e74c3c;font-size: 12px;margin: 2px 2px 0;}
+
+/*操作提示层*/
+.javaex-opt-tip{position: fixed; top: 40px; left: 50%; padding: 0 15px;min-width: 200px;height: 40px; z-index: 10001;}
+.javaex-opt-tip .javaex-tip-icon{display: inline-block; width: 22px; height: 40px;line-height: 40px; margin: 0 1px 0 0; padding-left: 1px;}
+.javaex-opt-tip .javaex-tip-icon.javaex-tip-icon-loading{background: url(../images/javaex-loading-white.gif) left 10px no-repeat;}
+.javaex-opt-tip .javaex-tip-icon{font-size:16px; font-weight:bold;}
+.javaex-opt-tip .java-opt-tip-msg{display: inline-block; margin: 0 3px; font-size: 14px; line-height: 40px; height: 40px;}
+.javaex-message-feedback{display: table; top: 50%; left: 50%; margin-top: -50px; margin-left: -130px; width: auto; min-width: 280px; height: 98px; border-radius: 5px; font-size: 0; text-align: center;position: fixed; z-index: 10001;}
+.javaex-message-feedback .javaex-mf-submit{border-radius: 5px;}
+.javaex-message-feedback .javaex-mf-icons{display: table-cell; vertical-align: middle; padding: 0 20px;}
+.javaex-mf-icon.javaex-mf-icon-submit{background: transparent url(../images/javaex-message-feedback-loading.png) no-repeat; width: 38px; height: 38px; display: inline-block; animation: javaexLoading 1s steps(12,end) infinite; background-size: 100%;}
+.javaex-mf-icon.javaex-mf-icon-succeed{width: 30px; height: 30px; background-position: -40px 0;}
+.javaex-message-feedback .javaex-mf-icon{vertical-align: middle; margin-right: 11px;}
+.javaex-mf-icon{background-image: url(../images/javaex-message-icon.png); background-size: 70px 30px;display: inline-block; letter-spacing: 0; background-repeat: no-repeat;}
+.javaex-message-feedback .javaex-mf-text{display: inline-block; vertical-align: middle; text-align: left;font-size: 16px; line-height: 24px;}
+.javaex-mf-icon.javaex-mf-icon-failed{width: 30px; height: 30px; background-position: 0 0;}
+.javaex-toast-warp{position: fixed; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 1000;}
+.javaex-toast-content{font-size: 14px; line-height: 44px; height: 44px;color: #fff; padding: 0 30px; background: rgba(0, 0, 0, 0.7); border-radius: 4px; text-align: center;}
+.javaex-toast-content.error{background: rgba(245, 34, 45, 0.8);}
+
+/*气泡提示*/
+[tooltip]{position: relative;}
+[tooltip]:before{width: 0; height: 0; border: 5px solid transparent; content: "";}
+[tooltip][tooltip-pos="up"]:before, [tooltip][tooltip-pos="up"]:after{opacity:0;pointer-events:none;position:absolute;z-index:10;bottom:100%;left:50%;transform:translate(-50%,0);transform-origin:top;}
+[tooltip][tooltip-pos="up"]:after{padding:8px 10px; border-radius:2px; font-size:12px;line-height:16px;white-space:nowrap;content:attr(tooltip);margin-bottom:10px;}
+[tooltip][tooltip-pos="up"]:hover:after, [tooltip][tooltip-pos="up"]:hover:before{opacity: 1;}
+[tooltip][tooltip-pos="down"]:after, [tooltip][tooltip-pos="down"]:before{position: absolute; z-index: 10; top: 100%; left: 50%; pointer-events: none; opacity: 0; transform: translateX(-50%) translateY(-5px);}
+[tooltip][tooltip-pos="down"]:after{margin-top: 9px; padding: 8px 10px; border-radius: 2px; font-size: 12px; line-height: 16px; white-space: nowrap; content: attr(tooltip);}
+[tooltip][tooltip-pos="down"]:hover:after, [tooltip][tooltip-pos="down"]:hover:before{opacity: 1;}
+[tooltip][tooltip-pos="left"]:before, [tooltip][tooltip-pos="left"]:after{opacity: 0; pointer-events: none; transition: all .1s ease-out .1s; position: absolute; z-index: 10; right: 100%; top: 50%; transform: translate(0, -50%);}
+[tooltip][tooltip-pos="left"]:after{font-size: 12px; border-radius: 2px; content: attr(tooltip); padding: 8px 10px;margin-right: 10px; white-space: nowrap;}
+[tooltip][tooltip-pos="left"]:hover:after, [tooltip][tooltip-pos="left"]:hover:before{opacity: 1;}
+[tooltip][tooltip-pos="right"]:before, [tooltip][tooltip-pos="right"]:after{opacity: 0; pointer-events: none; transition: all .1s ease-out .1s; position: absolute; z-index: 10; left: 100%; top: 50%; transform: translate(0, -50%);}
+[tooltip][tooltip-pos="right"]:after{font-size: 12px; border-radius: 2px; content: attr(tooltip); padding: 8px 10px;margin-left: 10px; white-space: nowrap;}
+[tooltip][tooltip-pos="right"]:hover:after, [tooltip][tooltip-pos="right"]:hover:before{opacity: 1;}
+
+/*树形菜单*/
+.javaex-tree > .javaex-fill-label{margin-left: 20px;}
+.javaex-tree li.javaex-tree-parent-li{padding-left: 20px;}
+.javaex-tree li.javaex-tree-child-li{padding-left: 40px;}
+.javaex-tree>ul>li.javaex-tree-parent-li{padding-left: 0;margin-left: 0;}
+.javaex-tree li a{display: inline-block; cursor: pointer; text-decoration: none; vertical-align: initial;font-size: 14px;height: 24px;line-height: 24px;margin-left: 4px;}
+.javaex-tree li a:hover{text-decoration:underline;}
+.javaex-tree li a.on{padding-right: 6px;}
+.javaex-tree span.icon-caret-right, .javaex-tree span.icon-caret-down{font-size: 16px;}
+.javaex-tree .javaex-fill-label{height: 24px; line-height: 24px;}
+span.javaex-tree-icon{display: inline-block; vertical-align: top;width: 20px;line-height: 20px;font-size: 14px; text-align: center;cursor: pointer;}
+
+/*文件上传*/
+.javaex-file-container{display: inline-block;position: relative;}
+.javaex-file-container .javaex-file{position: absolute; cursor: pointer;width: 100%; height: 100%; top: 0; left: 0; outline: none; background-color: transparent; filter: alpha(opacity=0); -moz-opacity: 0; -khtml-opacity: 0; opacity: 0;font-size: 0 !important;}
+.javaex-file-container .javaex-cover{position: relative;width: 195px;height: 110px;border: 1px solid #eaeaf0;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;cursor: pointer;-webkit-transition: all .5s ease;transition: all .5s ease;overflow: hidden;z-index: 1;}
+.javaex-file-container .javaex-cover img{display: block; margin: 30px auto; -webkit-transition: -webkit-transform .5s ease; transition: -webkit-transform .5s ease; transition: transform .5s ease; transition: transform .5s ease,-webkit-transform .5s ease;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;z-index: 2;}
+.javaex-file-container .javaex-cover img.javaex-upload-img{width: 100%; height: 100%;margin: 0 auto; -o-object-fit: cover; object-fit: cover;}
+.javaex-file-container .javaex-cover:hover img.javaex-upload-img-cover{-webkit-transform:rotate(90deg);transform:rotate(90deg);}
+.javaex-file-container .javaex-cover .javaex-cover-text{color: #595966; font-size: 12px; position: absolute; bottom: 5px; width: 100%; text-align: center; line-height: 40px;}
+.javaex-cover-mask{position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; background: #000000; text-align: center; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-flex-flow: column; -ms-flex-direction: column; flex-direction: column; opacity: 0;}
+.javaex-cover-mask span{margin: auto 0; font-size: 30px; color: #ccc;}
+.javaex-cover-mask:hover{opacity: 0.4;}
+
+/*头像上传*/
+.javaex-image-box{position: relative; height: 300px; width: 300px; overflow: hidden; background-repeat: no-repeat;}
+.javaex-image-box .icon-zoom-out, .javaex-image-box .icon-zoom-in{cursor: pointer;}
+.javaex-image-box .javaex-cut-box{position: absolute; top: 50%; left: 50%; width: 200px; height: 200px; margin-top: -100px; border-radius: 200px; margin-left: -100px;}
+.javaex-image-box .javaex-move-box{position: absolute; top: 0; left: 0; bottom: 0; right: 0;background-image: url(../images/javaex-up-avatar.jpg);}
+.javaex-unit div.javaex-avatar-original{float: left;padding-right: 20px;}
+.javaex-unit div.javaex-avatar-preview{float: left;padding:20px 30px 30px;}
+.javaex-avatar-preview .javaex-avatar-view{position:relative;margin-top:20px;}
+.javaex-view-avatar180{position:absolute;left:0;top:0;}
+.javaex-avatar180{width:180px;height:180px;border-radius:180px;}
+.javaex-view-avatar50{position:absolute;left:230px;top:0;}
+.javaex-avatar50{width:50px;height:50px;border-radius:50px;}
+.javaex-view-avatar30{position:absolute;left:230px;top:150px;}
+.javaex-avatar30{width:30px;height:30px;border-radius:30px;}
+.javaex-avatar60{width:60px;height:60px;border-radius:50px;}
+
+/*页面预加载*/
+.javaex-loading{background-color: #FFF;position: absolute;-webkit-transition: opacity 0.3s;-moz-transition: opacity 0.3s;-ms-transition: opacity 0.3s;-o-transition: opacity 0.3s;transition: opacity 0.3s;-moz-transition: opacity .3s;-webkit-transition: opacity .3s;transition: opacity .3s;-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);-moz-box-shadow: 1px 1px 8px rgba(0,0,0,0.2);-webkit-box-shadow: 1px 1px 8px rgba(0,0,0,0.2);box-shadow: 1px 1px 8px rgba(0,0,0,0.2);border: 2px solid #D6E7F2;padding: 0 12px 0 36px;background: url(../images/javaex-loading.gif) no-repeat 10px center #FCFCFC;line-height: 44px;color: #37A;font-weight: 700;font-size: 14px;width: auto;left: 50%;margin-left: -100px;top: 120px;z-index: 10002;opacity: 1;}
+.javaex-loading-mask{min-height: 200px;position: absolute; z-index: 1004; top: -1px;left: -1px;width: calc(100% + 2px);height: calc(100% + 2px);display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-flex-flow: column; -ms-flex-direction: column; flex-direction: column; -webkit-transition-property: opacity; -webkit-transition-duration: 100ms; -webkit-backface-visibility: hidden;}
+.javaex-loading-process{background-image: url(../images/javaex-process.svg),none;background-size: 100%;width: 52px; height: 52px;z-index: 10002;}
+
+/*图片上传*/
+.javaex-images-container{margin-top:20px;min-height:120px;}
+.javaex-upload-images-thumbnail{position:relative;overflow:hidden;float:left;width:100px;height:100px;margin: 10px 0 10px 10px;}
+.javaex-upload-images-thumbnail img{width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover;}
+.javaex-img-trash{position: absolute;top: 0;left: 0;height: 0;background: rgba( 0, 0, 0, 0.5 );width: 100%;overflow: hidden;}
+.javaex-img-trash span{width: 24px;height: 24px;float: right;margin-top: 6px;font-size: 16px;}
+
+/*幻灯片*/
+.javaex-slide{position:relative;overflow:hidden;}
+.javaex-slide .javaex-slide-prev, .javaex-slide .javaex-slide-next{position: absolute; z-index: 9;opacity:0;visibility: hidden;cursor: pointer;}
+.javaex-slide ul.javaex-slide-focus-bg:before, .javaex-slide ul.javaex-slide-focus-bg:after{display:table;content:" ";line-height:0}
+.javaex-slide ul.javaex-slide-focus-bg:after{clear:both}
+.javaex-slide ul.javaex-slide-focus-bg li{position:absolute;}
+.javaex-slide .javaex-slide-focus-title li{display:none;z-index: 10;}
+.javaex-slide .javaex-slide-focus-box{position:absolute;}
+
+/*富文本编辑器*/
+.javaex-edit-container{width: 100%; position: relative; line-height: 1.7; border: 1px solid #d4d4d4; background-color: #fff;}
+.javaex-edit-container ol, .javaex-edit-content ol{margin-top: 5px;}
+.javaex-edit-container a{color: #777;}
+.javaex-edit-container h1, .javaex-edit-container h2, .javaex-edit-container h3, .javaex-edit-container h4, .javaex-edit-container h5, .javaex-edit-container h6, .javaex-edit-content h1, .javaex-edit-content h2, .javaex-edit-content h3, .javaex-edit-content h4, .javaex-edit-content h5, .javaex-edit-content h6{font-family: Helvetica,Arial,Microsoft Jhenghei,Heiti TC,PingFang TC,sans-serif;font-weight: 700;}
+.javaex-edit-container h1, .javaex-edit-container h2, .javaex-edit-content h1, .javaex-edit-content h2{margin-bottom: 20px;}
+.javaex-edit-container h3, .javaex-edit-container h4, .javaex-edit-container h5, .javaex-edit-container h6, .javaex-edit-content h3, .javaex-edit-content h4, .javaex-edit-content h5, .javaex-edit-content h6{margin-bottom: 14px;}
+.javaex-edit-container .javaex-edit-toolbar{position: relative; width: auto; border-bottom: 1px dashed #e1e1e1; background-color: #fff;}
+.javaex-edit-toolbar .javaex-edit-btn-toolbar{position: relative; margin:5px;line-height: 36px;}
+.javaex-edit-toolbar .javaex-edit-btn-toolbar i{font-style:normal;}
+.javaex-edit-toolbar .javaex-edit-btn-toolbar a{color: #777 !important;}
+.javaex-edit-btn-toolbar .edit-btn{float: left;position: relative;display: inline-block;vertical-align: middle;border: none;height: 36px;width: 36px; padding: 0 8px; background-color: transparent;cursor: pointer;}
+.javaex-edit-container .javaex-edit-body{background-color: #fff;}
+.javaex-edit-container .javaex-edit-body i, .javaex-edit-container .javaex-edit-body em{font-style: italic;}
+.javaex-edit-body .javaex-edit-body-container{font-size: 16px;border: 0; outline: none; padding: 10px; overflow: hidden; overflow-y: auto; display: block; word-wrap: break-word; line-height: 1.7; min-height: 320px;}
+.javaex-edit-body .javaex-edit-body-container code{font-size: 14px;}
+.javaex-edit-body .javaex-edit-body-container p, .javaex-edit-content p{margin-bottom: 12px; font-size: 16px;}
+.javaex-edit-body .javaex-edit-body-container ul, .javaex-edit-content ul{padding-left:40px;list-style: unset;}
+.javaex-edit-body .javaex-edit-body-container ol>li, .javaex-edit-content ol>li, .javaex-edit-body .javaex-edit-body-container ul>li, .javaex-edit-content ul>li{list-style:unset;line-height: 26px;margin: 12px 0;}
+.javaex-edit-body .javaex-edit-body-container img{max-width: 600px;max-height: 600px;margin: 5px 0;}
+.javaex-edit-body .javaex-edit-body-container a{color: #0886e9;text-decoration: underline;}
+.javaex-edit-btn-toolbar .separator-line{display: block; float: left; height: 26px; width: 1px; margin: 5px; box-shadow: inset -1px 0 0 0 rgba(0,0,0,.1);}
+.javaex-edit-btn-toolbar .edit-btn:hover, .javaex-edit-btn-toolbar .edit-active{background-color: rgba(0,0,0,.05);}
+.javaex-edit-btn-toolbar .icon{font-size: 22px;color: #666;}
+.javaex-edit-btn-toolbar .edit-btn-foreColor, .javaex-edit-btn-toolbar .edit-btn-backColor{position: relative; display: inline-block;float: left;}
+.javaex-edit-btn-toolbar .javaex-edit-combobox{width:90px; padding: 0; line-height: 26px;display: inline-block;position: relative;}
+.javaex-edit-btn-toolbar .javaex-edit-size, .javaex-edit-btn-toolbar .javaex-edit-size .edit-button-label{width:60px;}
+.javaex-edit-combobox .edit-button-label{position: relative; display: inline-block; vertical-align: top; width: 90px; height: 36px; line-height: 36px; padding-left: 10px; margin: 0; font-size: 14px; cursor: pointer;}
+.javaex-edit-combobox .icon-caret-down{position: absolute; right: 10px; top: 11px;}
+.javaex-edit-btn-toolbar .icon:before{line-height: 36px;}
+.javaex-edit-combobox-menu{position: absolute;top: 120%;left: 0;list-style: none;text-decoration: none;margin: 0;background: rgba(28,28,28,.9);box-shadow: 0 0 25px rgba(0,0,0,.3);border-radius: 2px;font-size: 12px;min-width: 140px;}
+.javaex-edit-combobox-menu .javaex-edit-combobox-item{display: block; color: #fff;}
+.javaex-edit-combobox-menu .javaex-edit-combobox-item-label{cursor: pointer;display: inline-block; font-size: 14px; padding: 2px 15px;}
+.javaex-edit-combobox-paragraph .javaex-edit-combobox-item-1 .javaex-edit-combobox-item-label{font-size: 32px; height: 36px; line-height: 36px;}
+.javaex-edit-combobox-paragraph .javaex-edit-combobox-item-2 .javaex-edit-combobox-item-label{font-size: 28px; height: 27px; line-height: 27px;}
+.javaex-edit-combobox-paragraph .javaex-edit-combobox-item-3 .javaex-edit-combobox-item-label{font-size: 24px; height: 25px; line-height: 25px;}
+.javaex-edit-combobox-paragraph .javaex-edit-combobox-item-4 .javaex-edit-combobox-item-label{font-size: 18px; height: 25px; line-height: 25px;}
+.javaex-edit-combobox-paragraph .javaex-edit-combobox-item-5 .javaex-edit-combobox-item-label{font-size: 16px;}
+.javaex-edit-combobox-paragraph .javaex-edit-combobox-item-6 .javaex-edit-combobox-item-label{font-size: 12px;}
+.javaex-edit-combobox-menu li.javaex-edit-combobox-item:hover{color: #1B8AFA;background-color: rgba(239, 239, 239, 0.15);}
+.javaex-edit-combobox-menu .javaex-edit-combobox-checked{color: #1B8AFA;background-color: rgba(239, 239, 239, 0.15);}
+.javaex-edit-family, .javaex-edit-size{border-radius: 2px;border: 1px solid transparent;}
+.javaex-edit-family:hover, .javaex-edit-size:hover{background-color: rgba(0,0,0,.05);}
+.javaex-edit-quote blockquote{color:#777;font-size:16px;display:block;padding:16px;margin:0 0 24px;border-left:8px solid #dddfe4;background:#eef0f4;overflow:auto;word-wrap:normal;word-break:normal;}
+.javaex-table.edit-table, .javaex-table.edit-table td{border: 1px solid #E3EDF5;}
+.javaex-edit-color-menu{position: absolute;top: 120%;left: 0;list-style: none;text-decoration: none;margin: 0;background: rgba(28,28,28,.9);box-shadow: 0 0 25px rgba(0,0,0,.3);border-radius: 2px;width: 200px;padding: 4px; z-index: 9}
+.javaex-edit-color-menu input{float: left;margin: 5px;padding: 0;width: 22px;height: 22px;border: 0;cursor: pointer;border-radius: 50%;}
+.javaex-edit-color-menu input:hover{transform: scale(1.3);}
+.javaex-edit-btn-toolbar .edit-btn-bold{padding: 0 4px;}
+.javaex-edit-btn-toolbar .edit-btn-bold .icon{font-size: 28px;}
+.javaex-edit-btn-toolbar .edit-btn-italic{padding: 0 4px;}
+.javaex-edit-btn-toolbar .edit-btn-italic .icon{font-size: 28px;}
+.javaex-edit-btn-toolbar .edit-btn-underline{padding: 0 7px;}
+.javaex-edit-btn-toolbar .edit-btn-underline .icon{font-size: 24px;}
+.javaex-edit-btn-toolbar .edit-btn-strikethrough{padding: 0 4px;}
+.javaex-edit-btn-toolbar .edit-btn-strikethrough .icon{font-size: 28px;}
+.javaex-edit-btn-toolbar .edit-btn-foreColor .icon{margin-top: -2px;}
+.javaex-edit-btn-toolbar .edit-btn-backColor .edit-btn{padding: 0 7px;}
+.javaex-edit-btn-toolbar .edit-btn-backColor .icon{font-size: 24px;}
+.javaex-edit-btn-toolbar .edit-btn-selectAll{padding: 0 4px;}
+.javaex-edit-btn-toolbar .edit-btn-selectAll .icon{font-size: 28px;}
+.javaex-edit-btn-toolbar .edit-btn-removeFormat{padding: 0 4px;}
+.javaex-edit-btn-toolbar .edit-btn-removeFormat .icon{font-size: 28px;}
+.javaex-edit-btn-toolbar .edit-btn-insertOrderedList{padding: 0 4px;}
+.javaex-edit-btn-toolbar .edit-btn-insertOrderedList .icon{font-size: 28px;}
+.javaex-edit-btn-toolbar .edit-btn-insertUnorderedList{padding: 0 4px;}
+.javaex-edit-btn-toolbar .edit-btn-insertUnorderedList .icon{font-size: 28px;}
+.javaex-edit-btn-toolbar .edit-btn-quote{padding: 0 4px;}
+.javaex-edit-btn-toolbar .edit-btn-quote .icon{font-size: 28px;}
+
+.javaex-edit-content i, .javaex-edit-content em{font-style: italic;}
+.javaex-edit-content{font-size: 16px;line-height: 1.7;}
+.javaex-edit-content code{font-size: 14px;}
+.javaex-edit-content .javaex-edit-body a, .javaex-edit-content a{color: #0886e9;}
+.javaex-edit-content a:hover{text-decoration:underline;}
+.javaex-edit-content img{margin: 5px 0;max-width: 80%;}

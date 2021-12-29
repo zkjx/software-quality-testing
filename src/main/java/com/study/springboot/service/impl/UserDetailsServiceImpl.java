@@ -39,6 +39,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if(!"admin".equals(username)){
             throw new UsernameNotFoundException("用户名不存在！");
         }
+
         //2.把查询出来的密码（注册时已经加密过）进行解析，或者直接把密码放入构造方法里
         String password = pw.encode("123");
         return new User(username, password,
