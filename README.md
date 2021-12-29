@@ -634,7 +634,7 @@ TestNG 默认自带的有HTML格式的测试报告。这也充分说明拿它来
 
 此问题目前也没有明确问题关键问题与解答，而提供的解决方式就是——将连接操作数据库的代码都直接放在 @DataProvider 中，它就可以正常工作，改后的代码见下面给出的代码示例。
 
-![image](https://img2020.cnblogs.com/blog/2361932/202112/2361932-20211230002431550-10709260.png)
+![在这里插入图片描述](https://img-blog.csdnimg.cn/86b6aaa7bebb45c294d01b622ae0f2ae.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 涉及这方面的知识，后续有时间再了解查阅一下此方面的问题该要如何解决。因此在测试时就改成了用上面能解决数据读取的方法。
 
