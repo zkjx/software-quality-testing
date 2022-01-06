@@ -23,23 +23,36 @@
 
 
 # 目录
-
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/6ce41d74e2694849b109f04e45c42bd1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16)
 # 一、软件测试的原理与方法
 ## 1.1 什么是软件测试
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/9d86b697ce92467cb63b75951bac70dd.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_19,color_FFFFFF,t_70,g_se,x_16)
-- 关于“软件测试”的正反观点：
-程序测试是为了发现错误而执行程序的过程。
-测试带有**“破坏性”**。
+软件测试的**直接目的**：就是为了发现软件缺陷（bug）
 
-- 软件测试的定义：
+软件测试的**根本目的**：是为了提高软件质量，降低软件开发的风险
+
+所有的软件都会存在或多或少的问题，**错误需要测试来发现，同时还需要测试来评估错误密度。**
+
+软件测试**是软件质量保证的关键步骤**。**越早发现错误代价越低**。
+
+软件测试能证明软件存在缺陷，却**不能证明软件没有缺陷**。
+
+软件测试就是一系列活动，**用来评估一个程序或软件系统的特性或能力，确定是否达到了预期结果**。
+
+
+关于“软件测试”的正反观点：
+程序测试是为了发现错误而执行程序的过程。
+测试带有**破坏性**。
+
+软件测试的定义：
 软件测试是**验证**和**有效性确认**构成的整体。
 
 ## 1.2 测试和开发的关系
-需求分析->设计->编程->测试->维护
+**需求分析->设计->编程->测试->维护**
+![在这里插入图片描述](https://img-blog.csdnimg.cn/93f1150848084826bd5f2f82030d0ec2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16)
 
 ## 1.3 测试驱动开发思想
-TDD：
+TDD（测试驱动开发）：
 ①	明确当前要完成的功能，可以记录成一个TODO列表
 ②	快速完成针对此功能的测试用例编写
 ③	测试代码编译不通过
@@ -57,6 +70,46 @@ TDD：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/ca58c1c1e3924a2ba0068dd40c623e65.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/9be7b9b465414400a7fbe65716035632.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16)
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/f7875a91cfc348a494de385e662acd83.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5bCP5L2V5a2m6ZW_,size_20,color_FFFFFF,t_70,g_se,x_16)
+
+**软件质量的定义**：软件产品满足规定的和隐含的与需求能力有关的全部特征和特性。
+它包括：
+（1）软件产品质量满足用户要求的程度
+（2）软件各种属性的组合程度
+（3）用户对软件产品的综合反映程度
+（4）软件在使用过程中满足用户要求的程度
+
+这些特性反映在软件系统的**功能性、易用性、有效性、可靠性和性能**等方面。
+
+**软件缺陷其实就指的是对于软件产品质量而言出现的各种偏差、错误或谬误。**
+
+从**产品内部**看，软件缺陷是软件产品开发和维护过程中所存在的错误、毛病等各种问题；
+从**外部**看，软件缺陷是系统所需要实现的某种特性的失效或违背。
+
+软件缺陷的官方定义，**至少违反下列原则之一**：
+1.软件未实现产品说明书要求的功能；
+2.软件出现了产品说明书提到不应该的错误；
+3.软件实现了产品说明书未提到的功能；
+4.软件未实现产品说明书未提到但应实现的目标；
+5.软件难以理解、不易使用、运行缓慢等问题；
+
+
+**软件测试的分类**
+
+测试层次
+- 底层测试： 单元测试；
+- 接口层次：集成测试，完成系统内单元之间接口和单元集成为一个完整系统的测试
+- 系统测试：负载、压力、强壮性测试
+- 用户层次： 验收测试，验收用户是否真正所需要的产品特性，验收测试关注用户环境、用户数据，用户也参与测试。
+
+测试对象
+- 单元测试
+- 程序测试
+- 系统测试
+- 文档测试
+- Web应用测试、客户端测试
+- 数据库测试、服务器测试
+
+
 ## 2.1 黑盒测试和白盒测试
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/c322a1ae3bc24df5ac1cb32ca68b8c99.png)
  ①白盒测试：测试程序内部的变量状态、逻辑结构、运行路径等，检验程序中的每条通路是否都能按预定要求正确工作，检查程序内部动作或运行是否符合设计规格要求，所有内部成分是否按规定正常进行。
